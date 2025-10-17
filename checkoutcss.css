@@ -1,0 +1,451 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Header Styles */
+header {
+    background-color: #28a745;
+    color: white;
+}
+
+.first {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.first h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+#user-icon {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.user-dropdown {
+    position: absolute;
+    right: 40px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    font-size: 16px;
+    min-width: 120px;
+    z-index: 100;
+}
+
+.user-dropdown a {
+    padding: 10px;
+    text-decoration: none;
+    color: #4b6043;
+    display: block;
+}
+
+.user-dropdown a:hover {
+    background-color: #f0f0f0;
+    color: #4b6043;
+}
+
+nav {
+    padding: 0 40px;
+}
+
+.options {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.options li {
+    position: relative;
+}
+
+.options a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 10px 0;
+    display: block;
+}
+
+.options a:hover {
+    color: #f0f0f0;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 128, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    min-width: 200px;
+    z-index: 100;
+}
+
+.dropdown li {
+    width: 100%;
+}
+
+.dropdown a {
+    color: #333;
+    padding: 10px 15px;
+}
+
+.dropdown a:hover {
+    background-color: #f0f0f0;
+    color: #28a745;
+}
+
+.options li:hover .dropdown {
+    display: flex;
+}
+
+header hr {
+    border: none;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.heading h1 {
+    font-size: 2rem;
+    color: #28a745;
+}
+
+/* Checkout Container */
+.checkout-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.checkout-form {
+    flex: 1 1 600px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.order-summary {
+    flex: 1 1 300px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    align-self: flex-start;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #28a745;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+/* Payment Options */
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.payment-option input[type="radio"] {
+    width: auto;
+}
+
+.payment-details {
+    margin-bottom: 25px;
+    padding-top: 10px;
+}
+
+/* Terms Checkbox */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms input {
+    width: auto;
+}
+
+.terms a {
+    color: #28a745;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    font-family: 'Poppins', sans-serif;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-size: 1rem;
+}
+
+.checkout-btn:hover {
+    background-color: #218838;
+}
+
+/* Order Summary */
+.summary-items {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.total {
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
+    padding-top: 15px;
+}
+
+/* Coupon */
+.coupon {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.coupon input {
+    flex: 1;
+}
+
+.coupon button {
+    font-family: 'Poppins', sans-serif;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.coupon button:hover {
+    background-color: #218838;
+}
+
+#coupon-message {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+.opt {
+    min-width: 200px;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.topic {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.topic::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: #28a745;
+}
+
+.opt li {
+    margin-bottom: 10px;
+}
+
+.opt a {
+    color: #ddd;
+    transition: color 0.3s ease;
+}
+
+.opt a:hover {
+    color: #28a745;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+    
+    .first {
+        padding: 10px 20px;
+    }
+    
+    nav {
+        padding: 0 20px;
+    }
+    
+    .options {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+    
+    .dropdown {
+        position: static;
+        width: 100%;
+        box-shadow: none;
+        display: none;
+    }
+    
+    .options li:hover .dropdown {
+        display: flex;
+    }
+    
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .payment-methods {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .checkout-container {
+        flex-direction: column;
+    }
+    
+    .order-summary {
+        width: 100%;
+    }
+    
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .topic::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

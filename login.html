@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Agrify|Login</title>
+        <link rel="stylesheet" href="login.css">
+        <link rel="icon" href="icon.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    </head>
+    <body>
+        <header>
+            <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left" style="color: green;"></i>  Back</a>
+        </header>
+        <main>
+            <form method="POST" action="#" id="loginForm" onsubmit="return validate()" onreset="resetForm()">
+                <fieldset>
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" size="45vw" onkeydown="handleKeyDown(event)">
+                    <span id="username-error" class="error"></span>
+    
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" size="45vw" onkeydown="handleKeyDown(event)">
+                    <span id="password-error" class="error"></span> 
+    
+                    <input type="submit" value="Login">
+                    <input type="reset" value="Reset"> 
+                    <br>
+                    <label>Not Registered yet? <a href="signup.html">Sign up</a></label>
+                </fieldset>
+            </form>
+        </main>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const loginForm = document.getElementById("loginForm"); 
+                const resetButton = document.querySelector("input[type='reset']");
+            
+                if (!loginForm || !resetButton) {
+                    console.error("Form or reset button not found!");
+                    return;
+                }
+            
+                loginForm.addEventListener("submit", async function (event) {
+                    event.preventDefault(); 
+            
+                    console.log("Submit button clicked"); 
+            
+                    if (!validate()) {
+                        console.log("Validation failed, stopping execution"); 
+                        return;
+                    }
+            
+                    console.log("Validation passed, proceeding with login"); 
+            
+                    
+                    const username = document.getElementById("username").value.trim();
+                    const password = document.getElementById("password").value.trim();
+            
+                    try {
+                        const response = await fetch("http://localhost:3001/login", {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({ username, password })
+                        });
+            
+                        console.log("Fetch request sent"); 
+            
+                        const data = await response.json();
+                        if (response.ok) {
+                            console.log("Login successful, storing token");
+                            localStorage.setItem("token", data.token);
+                            localStorage.setItem("username", username);
+            
+                            alert("Login successful!");
+                            window.location.href = "index.html"; 
+                        } else {
+                            console.log("Login failed:", data.error); 
+                            alert(data.error);
+                        }
+                    } catch (error) {
+                        console.error("Login error:", error);
+                        alert("An error occurred. Please try again.");
+                    }
+                });
+            
+                resetButton.addEventListener("click", resetForm);
+            });
+            
+            function validate() {
+                let isValid = true;
+            
+                const username = document.getElementById("username").value.trim();
+                const password = document.getElementById("password").value.trim();
+            
+                const usernameError = document.getElementById("username-error");
+                const passwordError = document.getElementById("password-error");
+            
+                usernameError.innerHTML = "";
+                passwordError.innerHTML = "";
+            
+                
+                const usernameRegex = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/; 
+                const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; 
+            
+               
+                if (!usernameRegex.test(username)) {
+                    usernameError.innerHTML = "Username must start with a letter and be 3-15 characters long (numbers optional).";
+                    isValid = false;
+                }
+            
+                
+                if (!passwordRegex.test(password)) {
+                    passwordError.innerHTML = "Password must have 8+ chars, 1 uppercase, 1 lowercase, and 1 number.";
+                    isValid = false;
+                }
+            
+                return isValid;
+            }
+            
+            function resetForm() {
+                document.getElementById("username-error").innerHTML = "";
+                document.getElementById("password-error").innerHTML = "";
+            }
+
+            function handleKeyDown(event) {
+                if (event.key === "Enter") {
+                    event.preventDefault(); 
+
+                    if (validate()) { 
+                        document.querySelector("input[type='submit']").click(); 
+                    }
+                }
+            }
+            
+            </script>                                    
+    </body>
+</html>

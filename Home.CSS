@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+    color: blanchedalmond;
+    padding:10px;
+    
+}
+.top,.top1{
+    display: inline;
+}
+.top1{
+    margin-left: 70%;
+}
+.top{
+    margin-right: 15px;
+    color: blanchedalmond;
+    cursor: pointer;
+}
+.top:hover{
+    color: red;
+}
+.Agrify{
+    display: inline;
+}
+.head{
+    background-color: green;
+    color: aqua;
+    padding: 2px;
+    padding-bottom: 20px;
+}
+.name{
+    display: inline;
+}
+.login,.cart,.Trackyourorder,.OrderHistory{
+    color: black;
+    display: inline;
+    padding-left: 35px;
+    cursor: pointer;
+}
+.headmaterial{
+    display:inline-block;
+}
+.Search{
+    margin-left:15% ;
+    padding-left: 17%;
+    padding-right: 17%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+    display: inline;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: mediumspringgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.catagory{
+    background-color:seagreen ;
+    color: darkcyan;
+    padding: 10px;
+}
+.Insecticide{
+    display: inline;
+    padding-left: 2%;
+    font-size:large;
+    font-style: italic;
+    cursor: pointer;
+    color: gray;
+}
+.idea{
+    height: 700px;
+    width: 1500px;
+    padding: 5px;
+    padding-right:2px;
+}
+.agri{
+    background-color: grey;
+}
+
+.obc{
+    text-align: center;
+    background-color:olivedrab;
+    padding: 13px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

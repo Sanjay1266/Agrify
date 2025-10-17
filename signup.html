@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <link rel="icon" href="icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Sign Up</title>
+</head>
+<body>
+    <header>
+        <a href="javascript:history.back()"><i class="fa-solid fa-arrow-left" style="color: green;"></i> Back</a>
+    </header>
+    <main>
+        <form id="signupForm" method="POST" action="#" onsubmit="return validate()" onreset="resetForm()">
+            <fieldset>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" size="45" onkeydown="handleKeyDown(event)">
+                <span class="error" id="nameError"></span><br>
+
+                <label for="username">Username:</label><br>
+                <input type="text" id="username" name="username" size="45" onkeydown="handleKeyDown(event)">
+                <span class="error" id="usernameError"></span><br>
+
+                <label for="password">Password:</label><br>
+                <input type="password" id="password" name="password" size="45" onkeydown="handleKeyDown(event)">
+                <span class="error" id="passwordError"></span><br>
+
+                <input type="submit" value="Sign Up"><br>
+                <input type="reset" value="Reset"><br>
+
+                <label>Click here to <a href="login.html">Login</a></label>
+            </fieldset>
+        </form>
+    </main>
+
+    <script>
+        function validate() {
+            let isValid = true;
+
+            const namePattern = /^[A-Za-z\s]{3,}$/; 
+            const usernamePattern = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/; 
+            const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+            
+            const name = document.getElementById("name").value.trim();
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+
+            if (!namePattern.test(name)) {
+                document.getElementById("nameError").innerHTML = "Name must be at least 3 letters (only alphabets & spaces).";
+                isValid = false;
+            } else {
+                document.getElementById("nameError").innerHTML = "";
+            }
+
+            if (!usernamePattern.test(username)) {
+                document.getElementById("usernameError").innerHTML = "Username must be at least 5 characters (letters, numbers).";
+                isValid = false;
+            } else {
+                document.getElementById("usernameError").innerHTML = "";
+            }
+
+            if (!passwordPattern.test(password)) {
+                document.getElementById("passwordError").innerHTML = "Password must be 8+ chars, 1 uppercase, 1 number, 1 special character.";
+                isValid = false;
+            } else {
+                document.getElementById("passwordError").innerHTML = "";
+            }
+
+            return isValid;
+        }
+
+        function resetForm() {
+            document.getElementById("nameError").innerHTML = "";
+            document.getElementById("usernameError").innerHTML = "";
+            document.getElementById("passwordError").innerHTML = "";
+        }
+
+        document.getElementById("signupForm").addEventListener("submit", async function(event) {
+            event.preventDefault();
+            if (!validate()) return;
+
+            const name = document.getElementById("name").value;
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            try {
+                const response = await fetch("http://localhost:3001/register", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ name, username, password })
+                });
+
+                const result = await response.json();
+                if (response.ok) {
+                    alert("Signup successful! Redirecting to login.");
+                    window.location.href = "login.html";
+                } else {
+                    alert(result.error || "Signup failed. Try again.");
+                }
+            } catch (error) {
+                console.error("Signup error:", error);
+                alert("An error occurred. Please try again.");
+            }
+        });
+
+        function handleKeyDown(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); 
+
+                if (validate()) { 
+                    document.querySelector("input[type='submit']").click(); 
+                }
+            }
+        }
+    </script>
+</body>
+</html>

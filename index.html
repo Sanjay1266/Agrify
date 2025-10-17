@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrify- Modern Farming Solutions</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="icon" href="icon.png">
+</head>
+<body>
+    <header>
+        <div class="logo">Farming Products</div>
+        <nav>
+            <div id="mobile-menu" class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="secondpart.html">New to Farming</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="aboutus.html">About</a></li>
+                <li><a href="contactus.html">Contact</a></li>
+                <li><a href="Checkout.html">Orders</a></li>
+                <li class="usermenu"> <i class="fa-solid fa-user"></i>
+                    <div class="user-dropdown" id="dropdown-menu">
+                        <a href="profile.html">Profile</a>
+                        <a href="#" id="logout">Logout</a>
+                    </div></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="home" class="hero">
+            <h1>Premium Farming Solutions</h1>
+            <p>Quality products for better crop yield and plant health</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </section>
+        
+        <section id="products" class="products-section">
+            <h2>Our Products</h2>
+            
+            <!-- Category Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="location.href='insecticide.html'">All Products</button>
+                <button class="filter-btn" onclick="location.href='Insecticide.html'">Insecticide</button>
+                <button class="filter-btn" onclick="location.href='Fungicide.html'">Fungicide</button>
+                <button class="filter-btn" onclick="location.href='NPKFertilizers.html'">NPK Fertilizer</button>
+                <button class="filter-btn" onclick="location.href='HumicNutrients.html'">Humic Nutrient</button>
+                <button class="filter-btn" onclick="location.href='Nematicides.html'">Nematicide</button>
+                <button class="filter-btn" onclick="location.href='PlantGrowthPromoters.html'">Plant Growth Promoter</button>
+                <button class="filter-btn" onclick="location.href='YieldBoosters.html'">Yield Booster</button>
+            </div>
+            
+            <!-- Product Grid -->
+            <div id="product-list" class="product-grid"></div>
+            
+            <!-- Load More Button -->
+            <div class="load-more-container">
+                <button class="load-more">Load More</button>
+            </div>
+        </section>
+        
+        <section id="about" class="about">
+            <h2>About Us</h2>
+            <p>We are dedicated to providing high-quality agricultural products to help farmers achieve better yields and healthier crops. Our extensive range includes insecticides, fungicides, herbicides, fertilizers, and more.</p>
+        </section>
+        
+        <section id="contact" class="contact">
+            <h2>Get in Touch</h2>
+            <form id="contactForm" onsubmit="return validate()" onreset="resetForm()">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span id="name-error" class="error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <span id="email-error" class="error"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <span id="message-error" class="error"></span>
+                </div>
+                
+                <input type="submit" value="Send Message" class="submit-btn">
+                <input type="reset" value="Reset" class="reset-btn">
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="contactus.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Asgaard</p>
+                <p><i class="fas fa-phone"></i>  +91 8807522326, +91 9361682841</p>
+                <p><i class="fas fa-envelope"></i> info@agrify.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p> @ 2022 Agrify. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        function validate() {
+            let isValid = true;
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const message = document.getElementById("message").value.trim();
+            
+            const nameError = document.getElementById("name-error");
+            const emailError = document.getElementById("email-error");
+            const messageError = document.getElementById("message-error");
+            
+            nameError.innerHTML = "";
+            emailError.innerHTML = "";
+            messageError.innerHTML = "";
+            
+            const nameRegex = /^[a-zA-Z ]{3,}$/;
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            
+            if (!nameRegex.test(name)) {
+                nameError.innerHTML = "Name must contain only letters and spaces, with at least 3 characters.";
+                isValid = false;
+            }
+
+            if (!emailRegex.test(email)) {
+                emailError.innerHTML = "Please enter a valid email address.";
+                isValid = false;
+            }
+
+            if (message.length < 10) {
+                messageError.innerHTML = "Message must be at least 10 characters long.";
+                isValid = false;
+            }
+
+            return isValid;
+        }
+        
+        function resetForm() {
+            document.getElementById("name-error").innerHTML = "";
+            document.getElementById("email-error").innerHTML = "";
+            document.getElementById("message-error").innerHTML = "";
+        }
+    </script>
+    <!-- Link to our JavaScript file -->
+    <script src="script.js"></script>
+    <script src="updateUserIcon.js"></script>
+</body>
+</html>

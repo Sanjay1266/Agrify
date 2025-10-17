@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrify - Modern Farming Solutions</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="index.html">
+                    <i class="fas fa-leaf"></i> Agrify
+                </a>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>  
+            <ul class="nav-links">
+                <li><a href="#" class="active"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="#products"><i class="fas fa-store"></i> Products</a></li>
+                <li><a href="#farming"><i class="fas fa-seedling"></i> New to Farming</a></li>
+                <li><a href="#about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <button class="signup-btn" onclick="location.href='signup.html'">Sign Up</button>
+                <button class="login-btn" onclick="location.href='login.html'">Login</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>Grow Better with <span class="highlight">Agrify</span></h1>
+            <p>Your one-stop solution for sustainable farming and agricultural excellence.</p>
+            <div class="hero-buttons">
+                <button class="primary-btn" onclick="location.href='#products'">Explore Products</button>
+                <button class="secondary-btn" onclick="location.href='#about'">Learn More</button>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </header>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature-item">
+                <i class="fas fa-truck"></i>
+                <h3>Fast Delivery</h3>
+                <p>Get your products delivered within 24-48 hours</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-leaf"></i>
+                <h3>Organic Products</h3>
+                <p>100% certified organic farming solutions</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Expert assistance always available</p>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Secure Payments</h3>
+                <p>Multiple secure payment options</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Premium Products</h2>
+                <p>Discover high-quality agricultural solutions for your farm</p>
+            </div>
+            <div class="filter-container">
+                <button class="filter-btn active" onclick="location.href='index.html'">All Products</button>
+                <button class="filter-btn" onclick="location.href='Insecticide.html'">Insecticide</button>
+                <button class="filter-btn" onclick="location.href='Fungicide.html'">Fungicide</button>
+                <button class="filter-btn" onclick="location.href='NPKFertilizers.html'">NPK Fertilizer</button>
+                <button class="filter-btn" onclick="location.href='HumicNutrients.html'">Humic Nutrient</button>
+                <button class="filter-btn" onclick="location.href='Nematicides.html'">Nematicide</button>
+                <button class="filter-btn" onclick="location.href='PlantGrowthPromoters.html'">Plant Growth Promoter</button>
+                <button class="filter-btn" onclick="location.href='YieldBoosters.html'">Yield Booster</button>
+            </div>
+
+            <div class="product-container" id="product-list"></div>
+            <button class="load-more">Load More Products</button>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="container">
+            <div class="banner-content">
+                <h2>Special Offer</h2>
+                <p>Get 20% off on all organic fertilizers this week!</p>
+                <button class="primary-btn" onclick="location.href='Insecticide.html'">Shop Now</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="farming" class="farming-guide">
+        <div class="container">
+            <div class="section-header">
+                <h2>New to Farming?</h2>
+                <p>Start your farming journey with our comprehensive guides</p>
+            </div>
+            <div class="guide-container">
+                <div class="guide-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Beginner's Guide">
+                    <h3>Beginner's Guide</h3>
+                    <p>Everything you need to know to start your farm</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="guide-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Seasonal Tips">
+                    <h3>Seasonal Tips</h3>
+                    <p>Optimize your farming based on seasons</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+                <div class="guide-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Sustainable Practices">
+                    <h3>Sustainable Practices</h3>
+                    <p>Eco-friendly methods for modern farming</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="section-header">
+                        <h2>About Agrify</h2>
+                    </div>
+                    <p>Founded in 2020, Agrify has been revolutionizing the agricultural industry with innovative
+                        solutions and high-quality products. Our mission is to empower farmers with the tools and
+                        knowledge they need to succeed in modern agriculture.</p>
+                    <p>With a team of agricultural experts and technology specialists, we continuously strive to bring
+                        the latest advancements in farming to your doorstep.</p>
+                    <button class="secondary-btn">Learn More About Us</button>
+                </div>
+                <div class="about-image">
+                    <img src="https://via.placeholder.com/500x300" alt="About Agrify">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Agrify's products have transformed my farm's productivity. Their organic fertilizers
+                            increased my yield by 30%!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="John Doe">
+                        <div>
+                            <h4>John Doe</h4>
+                            <p>Organic Farmer</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"The customer service at Agrify is exceptional. They helped me choose the right seeds for my
+                            soil type and climate."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Jane Smith">
+                        <div>
+                            <h4>Jane Smith</h4>
+                            <p>Hobby Gardener</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"I've been using Agrify's tools for over two years now. They're durable, efficient, and have
+                            made farming so much easier."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="https://via.placeholder.com/60x60" alt="Robert Johnson">
+                        <div>
+                            <h4>Robert Johnson</h4>
+                            <p>Commercial Farmer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Have questions? We're here to help!</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>123 Farming Road, Agricultural District, Country</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+1 (555) 123-4567</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>info@agrify.com</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 9am - 5pm</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with our latest products and farming tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email Address" required>
+                    <button type="submit" class="primary-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3><i class="fas fa-leaf"></i> Agrify</h3>
+                    <p>Your partner in agricultural excellence</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#farming">Farming Guides</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#" data-category="Insecticide">Insecticide</a></li>
+                        <li><a href="#" data-category="Fungicide">Fungicide</a></li>
+                        <li><a href="#" data-category="Herbicide">Herbicide</a></li>
+                        <li><a href="#" data-category="Fertilizers">Fertilizers</a></li>
+                        <li><a href="#" data-category="Micronutrient">Micronutrients</a></li>
+                        <li><a href="#" data-category="Growth Promoters">Plant Growth Promoters</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Agrify. All rights reserved. | Designed with <i class="fas fa-heart"></i> for farmers</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Changed from script.js to script3.js to match the provided JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
