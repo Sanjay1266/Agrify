@@ -6,7 +6,7 @@ const products = [
         name: "Coragen Insecticide",
         company: "FMC",
         price: "₹167",
-        image: "Coragen.webp",
+        image: "assets/images/Coragen.webp",
         category: "Insecticide"
     },
     {
@@ -14,7 +14,7 @@ const products = [
         name: "Phoskill Insecticide",
         company: "UPL",
         price: "₹199",
-        image: "Phoskill.avif",
+        image: "assets/images/Phoskill.avif",
         category: "Insecticide"
     },
     {
@@ -22,7 +22,7 @@ const products = [
         name: "Exponus Insecticide",
         company: "BASE F",
         price: "₹582",
-        image: "Exponus.avif",
+        image: "assets/images/Exponus.avif",
         category: "Insecticide"
     },
     {
@@ -30,7 +30,7 @@ const products = [
         name: "Alika Insecticide",
         company: "Syngenta",
         price: "₹116",
-        image: "Alika Insecticide.avif",
+        image: "assets/images/Alika Insecticide.avif",
         category: "Insecticide"
     },
     {
@@ -38,7 +38,7 @@ const products = [
         name: "Jump Insecticide",
         company: "Bayer",
         price: "₹171",
-        image: "Jump.webp",
+        image: "assets/images/Jump.webp",
         category: "Insecticide"
     },
     {
@@ -46,7 +46,7 @@ const products = [
         name: "Solomon Insecticide",
         company: "Bayer",
         price: "₹369",
-        image: "Solomon.jpg",
+        image: "assets/images/Solomon.jpg",
         category: "Insecticide"
     },
     {
@@ -54,7 +54,7 @@ const products = [
         name: "Rogor Insecticide",
         company: "FMC",
         price: "₹102",
-        image: "Rogor.avif",
+        image: "assets/images/Rogor.avif",
         category: "Insecticide"
     },
     {
@@ -62,7 +62,7 @@ const products = [
         name: "Actara Insecticide",
         company: "Syngenta",
         price: "₹250",
-        image: "Actara.avif",
+        image: "assets/images/Actara.avif",
         category: "Insecticide"
     },
     {
@@ -70,7 +70,7 @@ const products = [
         name: "Ekalux Insecticide",
         company: "Syngenta",
         price: "₹225",
-        image: "Ekalux.avif",
+        image: "assets/images/Ekalux.avif",
         category: "Insecticide"
     },
     {
@@ -78,7 +78,7 @@ const products = [
         name: "Ampligo Insecticide",
         company: "Syngenta",
         price: "₹233",
-        image: "ampligo.avif",
+        image: "assets/images/ampligo.avif",
         category: "Insecticide"
     },
     // Micronutrients products (using placeholder images since none were provided in Micronutrients.html)

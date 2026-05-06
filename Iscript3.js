@@ -5,7 +5,7 @@ const insecticideProducts = [
         name: "Coragen Insecticide",
         company: "FMC",
         price: 167,
-        image: "Coragen.webp",
+        image: "assets/images/Coragen.webp",
         type: "systemic"
     },
     {
@@ -13,7 +13,7 @@ const insecticideProducts = [
         name: "Phoskill Insecticide",
         company: "UPL",
         price: 199,
-        image: "Phoskill.avif",
+        image: "assets/images/Phoskill.avif",
         type: "contact"
     },
     {
@@ -21,7 +21,7 @@ const insecticideProducts = [
         name: "Exponus Insecticide",
         company: "BASF",
         price: 582,
-        image: "Exponus.avif",
+        image: "assets/images/Exponus.avif",
         type: "systemic"
     },
     {
@@ -29,7 +29,7 @@ const insecticideProducts = [
         name: "Alika Insecticide",
         company: "Syngenta",
         price: 116,
-        image: "Alika Insecticide.avif",
+        image: "assets/images/Alika Insecticide.avif",
         type: "contact"
     },
     {
@@ -37,7 +37,7 @@ const insecticideProducts = [
         name: "Jump Insecticide",
         company: "Bayer",
         price: 171,
-        image: "Jump.webp",
+        image: "assets/images/Jump.webp",
         type: "field"
     },
     {
@@ -45,7 +45,7 @@ const insecticideProducts = [
         name: "Solomon Insecticide",
         company: "Bayer",
         price: 369,
-        image: "Solomon.jpg",
+        image: "assets/images/Solomon.jpg",
         type: "field"
     },
     {
@@ -53,7 +53,7 @@ const insecticideProducts = [
         name: "Rogor Insecticide",
         company: "FMC",
         price: 102,
-        image: "Rogor.avif",
+        image: "assets/images/Rogor.avif",
         type: "systemic"
     },
     {
@@ -61,7 +61,7 @@ const insecticideProducts = [
         name: "Actara Insecticide",
         company: "Syngenta",
         price: 250,
-        image: "Actara.avif",
+        image: "assets/images/Actara.avif",
         type: "systemic"
     },
     {
@@ -69,7 +69,7 @@ const insecticideProducts = [
         name: "Ekalux Insecticide",
         company: "Syngenta",
         price: 225,
-        image: "Ekalux.avif",
+        image: "assets/images/Ekalux.avif",
         type: "contact"
     },
     {
@@ -77,7 +77,7 @@ const insecticideProducts = [
         name: "Ampligo Insecticide",
         company: "Syngenta",
         price: 233,
-        image: "ampligo.avif",
+        image: "assets/images/ampligo.avif",
         type: "fruit"
     },
     {
@@ -85,7 +85,7 @@ const insecticideProducts = [
         name: "Admire Insecticide",
         company: "Bayer",
         price: 239,
-        image: "Admire.avif",
+        image: "assets/images/Admire.avif",
         type: "fruit"
     },
     {
@@ -93,7 +93,7 @@ const insecticideProducts = [
         name: "Lancergold Insecticide",
         company: "UPL",
         price: 303,
-        image: "Lancergold.avif",
+        image: "assets/images/Lancergold.avif",
         type: "field"
     },
     {
@@ -101,7 +101,7 @@ const insecticideProducts = [
         name: "Omite Insecticide",
         company: "Dhanuka",
         price: 199,
-        image: "Omite.webp",
+        image: "assets/images/Omite.webp",
         type: "fruit"
     },
     {
@@ -109,7 +109,7 @@ const insecticideProducts = [
         name: "Confidor Insecticide",
         company: "Bayer",
         price: 735,
-        image: "confidor.avif",
+        image: "assets/images/confidor.avif",
         type: "systemic"
     },
     {
@@ -117,7 +117,7 @@ const insecticideProducts = [
         name: "Karate Insecticide",
         company: "Syngenta",
         price: 199,
-        image: "Karate.webp",
+        image: "assets/images/Karate.webp",
         type: "contact"
     },
     {
@@ -125,7 +125,7 @@ const insecticideProducts = [
         name: "Oberon Insecticide",
         company: "Bayer",
         price: 715,
-        image: "Oberon.webp",
+        image: "assets/images/Oberon.webp",
         type: "fruit"
     },
     {
@@ -133,7 +133,7 @@ const insecticideProducts = [
         name: "Furadan Insecticide",
         company: "Crystal Crop Protection",
         price: 799,
-        image: "Furadan.avif",
+        image: "assets/images/Furadan.avif",
         type: "systemic"
     },
     {
@@ -141,7 +141,7 @@ const insecticideProducts = [
         name: "Gracia Insecticide",
         company: "Godrej Agrovet",
         price: 1400,
-        image: "Gracia.webp",
+        image: "assets/images/Gracia.webp",
         type: "organic"
     },
     {
@@ -149,7 +149,7 @@ const insecticideProducts = [
         name: "Pegasus Insecticide",
         company: "Syngenta",
         price: 926,
-        image: "pegasus.avif",
+        image: "assets/images/pegasus.avif",
         type: "organic"
     },
     {
@@ -157,7 +157,7 @@ const insecticideProducts = [
         name: "Ulala Insecticide",
         company: "UPL",
         price: 356,
-        image: "ULALA (1).avif",
+        image: "assets/images/ULALA (1).avif",
         type: "organic"
     },
     {
@@ -165,7 +165,7 @@ const insecticideProducts = [
         name: "Movento Energy Insecticide",
         company: "Bayer",
         price: 466,
-        image: "movento.avif",
+        image: "assets/images/movento.avif",
         type: "systemic"
     },
     {
@@ -173,7 +173,7 @@ const insecticideProducts = [
         name: "Tata Manik Insecticide",
         company: "Tata Rallis",
         price: 177,
-        image: "manik.avif",
+        image: "assets/images/manik.avif",
         type: "contact"
     },
     {
@@ -181,7 +181,7 @@ const insecticideProducts = [
         name: "Calden50 SP Insecticide",
         company: "Dhanuka",
         price: 420,
-        image: "calden50.avif",
+        image: "assets/images/calden50.avif",
         type: "field"
     },
     {
@@ -189,7 +189,7 @@ const insecticideProducts = [
         name: "Confidor Super Insecticide",
         company: "Bayer",
         price: 333,
-        image: "confidor super 1.avif",
+        image: "assets/images/confidor super 1.avif",
         type: "systemic"
     },
     {
@@ -197,7 +197,7 @@ const insecticideProducts = [
         name: "Insecticide",
         company: "BASF",
         price: 611,
-        image: "interpid.avif",
+        image: "assets/images/interpid.avif",
         type: "field"
     },
     {
@@ -205,7 +205,7 @@ const insecticideProducts = [
         name: "Curacron Insecticide",
         company: "Syngenta",
         price: 266,
-        image: "curacron.avif",
+        image: "assets/images/curacron.avif",
         type: "fruit"
     },
     {
@@ -213,7 +213,7 @@ const insecticideProducts = [
         name: "Tatamida Insecticide",
         company: "Tata Rallis",
         price: 444,
-        image: "tatamida.avif",
+        image: "assets/images/tatamida.avif",
         type: "systemic"
     },
     {
@@ -221,7 +221,7 @@ const insecticideProducts = [
         name: "Tricel Insecticide",
         company: "Sumitomo",
         price: 113,
-        image: "tricel.avif",
+        image: "assets/images/tricel.avif",
         type: "contact"
     },
     {
@@ -229,7 +229,7 @@ const insecticideProducts = [
         name: "Meothrin Insecticide",
         company: "Sumitomo",
         price: 496,
-        image: "Meothrin.avif",
+        image: "assets/images/Meothrin.avif",
         type: "fruit"
     },
     {
@@ -237,7 +237,7 @@ const insecticideProducts = [
         name: "Vayego Insecticide",
         company: "Bayer",
         price: 1089,
-        image: "vayego.avif",
+        image: "assets/images/vayego.avif",
         type: "organic"
     },
     {
@@ -245,7 +245,7 @@ const insecticideProducts = [
         name: "Voliam Flexi Insecticide",
         company: "Syngenta",
         price: 800,
-        image: "Voliam.avif",
+        image: "assets/images/Voliam.avif",
         type: "systemic"
     },
     {
@@ -253,7 +253,7 @@ const insecticideProducts = [
         name: "Shinwa Insecticide",
         company: "Insecticides(India)limited",
         price: 751,
-        image: "shinwa.avif",
+        image: "assets/images/shinwa.avif",
         type: "field"
     },
     {
@@ -261,7 +261,7 @@ const insecticideProducts = [
         name: "Proclaim Insecticide",
         company: "Crystal Crop Protection",
         price: 91,
-        image: "Proclaim.avif",
+        image: "assets/images/Proclaim.avif",
         type: "contact"
     },
     {
@@ -269,7 +269,7 @@ const insecticideProducts = [
         name: "Takaf Insecticide",
         company: "Adama",
         price: 332,
-        image: "takaf.avif",
+        image: "assets/images/takaf.avif",
         type: "fruit"
     },
     {
@@ -277,7 +277,7 @@ const insecticideProducts = [
         name: "Fortenza Duo Insecticide",
         company: "Syngenta",
         price: 562,
-        image: "frotenza.avif",
+        image: "assets/images/frotenza.avif",
         type: "systemic"
     },
     {
@@ -285,7 +285,7 @@ const insecticideProducts = [
         name: "Reeva 5 Insecticide",
         company: "Tata Rallis",
         price: 222,
-        image: "reeva.avif",
+        image: "assets/images/reeva.avif",
         type: "organic"
     },
     {
@@ -293,7 +293,7 @@ const insecticideProducts = [
         name: "Sefina Insecticide",
         company: "BASF",
         price: 745,
-        image: "sefina.avif",
+        image: "assets/images/sefina.avif",
         type: "fruit"
     }
 ];

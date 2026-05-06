@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Sample cart items - in a real app, this would come from your shopping cart
     const cartItems = [
-        { id: 1, name: "Roundup Herbicide", company: "Monsato", price: 149, quantity: 1, image: "roundup.avif" },
-        { id: 2, name: "Glycel Herbicide", company: "Sumitomo", price: 288, quantity: 2, image: "glycel.avif" }
+        { id: 1, name: "Roundup Herbicide", company: "Monsato", price: 149, quantity: 1, image: "assets/images/roundup.avif" },
+        { id: 2, name: "Glycel Herbicide", company: "Sumitomo", price: 288, quantity: 2, image: "assets/images/glycel.avif" }
     ];
     
     // Payment method toggle

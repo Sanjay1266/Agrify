@@ -6,7 +6,7 @@ const products = [
         name: "Coragen Insecticide",
         company: "FMC",
         price: "₹167",
-        image: "Coragen.webp",
+        image: "assets/images/Coragen.webp",
         category: "Insecticide"
     },
     {
@@ -14,7 +14,7 @@ const products = [
         name: "Phoskill Insecticide",
         company: "UPL",
         price: "₹199",
-        image: "Phoskill.avif",
+        image: "assets/images/Phoskill.avif",
         category: "Insecticide"
     },
     {
@@ -22,7 +22,7 @@ const products = [
         name: "Exponus Insecticide",
         company: "BASE F",
         price: "₹582",
-        image: "Exponus.avif",
+        image: "assets/images/Exponus.avif",
         category: "Insecticide"
     },
     {
@@ -30,7 +30,7 @@ const products = [
         name: "Alika Insecticide",
         company: "Syngenta",
         price: "₹116",
-        image: "Alika Insecticide.avif",
+        image: "assets/images/Alika Insecticide.avif",
         category: "Insecticide"
     },
     {
@@ -38,7 +38,7 @@ const products = [
         name: "Jump Insecticide",
         company: "Bayer",
         price: "₹171",
-        image: "Jump.webp",
+        image: "assets/images/Jump.webp",
         category: "Insecticide"
     },
     {
@@ -46,7 +46,7 @@ const products = [
         name: "Solomon Insecticide",
         company: "Bayer",
         price: "₹369",
-        image: "Solomon.jpg",
+        image: "assets/images/Solomon.jpg",
         category: "Insecticide"
     },
     {
@@ -54,7 +54,7 @@ const products = [
         name: "Rogor Insecticide",
         company: "FMC",
         price: "₹102",
-        image: "Rogor.avif",
+        image: "assets/images/Rogor.avif",
         category: "Insecticide"
     },
     {
@@ -62,7 +62,7 @@ const products = [
         name: "Actara Insecticide",
         company: "Syngenta",
         price: "₹250",
-        image: "Actara.avif",
+        image: "assets/images/Actara.avif",
         category: "Insecticide"
     },
     {
@@ -70,7 +70,7 @@ const products = [
         name: "Ekalux Insecticide",
         company: "Syngenta",
         price: "₹225",
-        image: "Ekalux.avif",
+        image: "assets/images/Ekalux.avif",
         category: "Insecticide"
     },
     {
@@ -78,7 +78,7 @@ const products = [
         name: "Ampligo Insecticide",
         company: "Syngenta",
         price: "₹233",
-        image: "ampligo.avif",
+        image: "assets/images/ampligo.avif",
         category: "Insecticide"
     },
     // Fungicide products
@@ -87,7 +87,7 @@ const products = [
         name: "Saaf Fungicide",
         company: "UPL",
         price: "₹99",
-        image: "Saaf.jpeg",
+        image: "assets/images/Saaf.avif",
         category: "Fungicide"
     },
     {
@@ -95,7 +95,7 @@ const products = [
         name: "Indofil M-45 Fungicide",
         company: "Indofil",
         price: "₹169",
-        image: "Indofil.webp",
+        image: "assets/images/Indofil.webp",
         category: "Fungicide"
     },
     {
@@ -103,7 +103,7 @@ const products = [
         name: "Nativo Fungicide",
         company: "Bayer",
         price: "₹412",
-        image: "Nativo.jpg",
+        image: "assets/images/Nativo.jpg",
         category: "Fungicide"
     },
     {
@@ -111,7 +111,7 @@ const products = [
         name: "Bavistin Fungicide",
         company: "Crystal Crop Protection",
         price: "₹276",
-        image: "Bavistin.webp",
+        image: "assets/images/Bavistin.avif",
         category: "Fungicide"
     },
     {
@@ -119,7 +119,7 @@ const products = [
         name: "Antracol Fungicide",
         company: "Bayer",
         price: "₹286",
-        image: "Antracol.webp",
+        image: "assets/images/Antracol.webp",
         category: "Fungicide"
     },
     {
@@ -127,7 +127,7 @@ const products = [
         name: "Ridomil Gold Fungicide",
         company: "Syngenta",
         price: "₹496",
-        image: "Redomil.jpeg",
+        image: "assets/images/Redomil.jpeg",
         category: "Fungicide"
     },
     {
@@ -135,7 +135,7 @@ const products = [
         name: "Amistar Top Fungicide",
         company: "Syngenta",
         price: "₹2222",
-        image: "Amistartop.jpg",
+        image: "assets/images/Amistartop.jpg",
         category: "Fungicide"
     },
     {
@@ -143,7 +143,7 @@ const products = [
         name: "Blue Copper Fungicide",
         company: "Crystal Crop Protection",
         price: "₹440",
-        image: "Bluecopper.jpg",
+        image: "assets/images/Bluecopper.jpg",
         category: "Fungicide"
     },
     {
@@ -151,7 +151,7 @@ const products = [
         name: "Sprint Fungicide",
         company: "Indofil",
         price: "₹580",
-        image: "Sprint.webp",
+        image: "assets/images/Sprint.webp",
         category: "Fungicide"
     },
     {
@@ -159,7 +159,7 @@ const products = [
         name: "Blitox Fungicide",
         company: "Tata Rallis",
         price: "₹496",
-        image: "Biltox.webp",
+        image: "assets/images/Biltox.webp",
         category: "Fungicide"
     },
     // Herbicide products
@@ -168,7 +168,7 @@ const products = [
         name: "Roundup Herbicide",
         company: "Monsanto",
         price: "₹149",
-        image: "Roundup.jpg",
+        image: "assets/images/roundup.jpeg",
         category: "Herbicide"
     },
     {
@@ -176,7 +176,7 @@ const products = [
         name: "Excel Mera 71 Herbicide",
         company: "Excel Crop Care",
         price: "₹175",
-        image: "ExcelMera.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -184,7 +184,7 @@ const products = [
         name: "Nominee Gold Herbicide",
         company: "PI Industries",
         price: "₹450",
-        image: "NomineeGold.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -192,7 +192,7 @@ const products = [
         name: "Atrazine Herbicide",
         company: "UPL",
         price: "₹320",
-        image: "Atrazine.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -200,7 +200,7 @@ const products = [
         name: "Glyphosate Herbicide",
         company: "Bayer",
         price: "₹235",
-        image: "Glyphosate.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -208,7 +208,7 @@ const products = [
         name: "2,4-D Sodium Salt Herbicide",
         company: "Crystal Crop Protection",
         price: "₹180",
-        image: "2-4D.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -216,7 +216,7 @@ const products = [
         name: "Targa Super Herbicide",
         company: "Nissan Chemical",
         price: "₹680",
-        image: "TargaSuper.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -224,7 +224,7 @@ const products = [
         name: "Pendimethalin Herbicide",
         company: "BASF",
         price: "₹520",
-        image: "Pendimethalin.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -232,7 +232,7 @@ const products = [
         name: "Pretilachlor Herbicide",
         company: "Syngenta",
         price: "₹410",
-        image: "Pretilachlor.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     {
@@ -240,7 +240,7 @@ const products = [
         name: "Butachlor Herbicide",
         company: "Dhanuka",
         price: "₹290",
-        image: "Butachlor.jpg",
+        image: "assets/images/default-user.png",
         category: "Herbicide"
     },
     // Humic Nutrient products
@@ -249,7 +249,7 @@ const products = [
         name: "Jivras Biostimulant",
         company: "Multiplex",
         price: "₹295",
-        image: "jivras.png",
+        image: "assets/images/jivras.png",
         category: "Humic Nutrient"
     },
     {
@@ -257,7 +257,7 @@ const products = [
         name: "Seahume",
         company: "Atkotiya Agro",
         price: "₹294",
-        image: "seahume.png",
+        image: "assets/images/seahume.png",
         category: "Humic Nutrient"
     },
     {
@@ -265,7 +265,7 @@ const products = [
         name: "Tapas Pushti",
         company: "Vanproz",
         price: "₹243",
-        image: "jivras.png",
+        image: "assets/images/jivras.png",
         category: "Humic Nutrient"
     },
     {
@@ -273,7 +273,7 @@ const products = [
         name: "Actosol Calcium",
         company: "Actosol",
         price: "₹996",
-        image: "actosol.png",
+        image: "assets/images/actosol.png",
         category: "Humic Nutrient"
     },
     {
@@ -281,7 +281,7 @@ const products = [
         name: "BCX Biohumic",
         company: "BCX Bio Organics",
         price: "₹130",
-        image: "BCX.png",
+        image: "assets/images/BCX.png",
         category: "Humic Nutrient"
     },
     {
@@ -289,7 +289,7 @@ const products = [
         name: "Zeal Humic Flakes",
         company: "Zeal Biologicals",
         price: "₹516",
-        image: "zealhumic.png",
+        image: "assets/images/zealhumic.png",
         category: "Humic Nutrient"
     },
     {
@@ -297,7 +297,7 @@ const products = [
         name: "Humate H & F Spray",
         company: "Humate India",
         price: "₹398",
-        image: "humate.png",
+        image: "assets/images/humate.png",
         category: "Humic Nutrient"
     },
     {
@@ -305,7 +305,7 @@ const products = [
         name: "Humi Pro 95 WSG",
         company: "Hifield Organic",
         price: "₹267",
-        image: "humipro.png",
+        image: "assets/images/humipro.png",
         category: "Humic Nutrient"
     },
     {
@@ -313,7 +313,7 @@ const products = [
         name: "Humesol Humic Acid",
         company: "PI Industries",
         price: "₹204",
-        image: "humesol.png",
+        image: "assets/images/humesol.png",
         category: "Humic Nutrient"
     },
     {
@@ -321,7 +321,7 @@ const products = [
         name: "Sun Bio Root",
         company: "Sonkul",
         price: "₹340",
-        image: "sunbioroot.png",
+        image: "assets/images/sunbioroot.png",
         category: "Humic Nutrient"
     },
     // Nematicide products
@@ -330,7 +330,7 @@ const products = [
         name: "Guardian N-Shield",
         company: "BioHarvest",
         price: "₹545",
-        image: "guardian-shield.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -338,7 +338,7 @@ const products = [
         name: "NemaKill Pro",
         company: "EcoAgro Solutions",
         price: "₹720",
-        image: "nemakill-pro.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -346,7 +346,7 @@ const products = [
         name: "RootGuard Plus",
         company: "Agrivance",
         price: "₹498",
-        image: "rootguard-plus.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -354,7 +354,7 @@ const products = [
         name: "NemaBlock Advanced",
         company: "GreenField",
         price: "₹630",
-        image: "nemablock.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -362,7 +362,7 @@ const products = [
         name: "Defender Soil Treatment",
         company: "Crop Shield",
         price: "₹860",
-        image: "defender-soil.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -370,7 +370,7 @@ const products = [
         name: "NemaStop Bio",
         company: "OrganicLife",
         price: "₹425",
-        image: "nemastop-bio.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -378,7 +378,7 @@ const products = [
         name: "Vydate Root Protector",
         company: "ProtectChem",
         price: "₹795",
-        image: "vydate-root.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -386,7 +386,7 @@ const products = [
         name: "SoilShield Nema Control",
         company: "TerraVita",
         price: "₹585",
-        image: "soilshield.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -394,7 +394,7 @@ const products = [
         name: "RootZone Nematicide",
         company: "PlantDefenders",
         price: "₹675",
-        image: "rootzone.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     {
@@ -402,7 +402,7 @@ const products = [
         name: "NemaGone Liquid",
         company: "FarmTech Solutions",
         price: "₹520",
-        image: "nemagone.png",
+        image: "assets/images/default-user.png",
         category: "Nematicide"
     },
     // NPK Fertilizer products
@@ -411,7 +411,7 @@ const products = [
         name: "KATYAYANI NPK 19:19:19",
         company: "Katyayani Organics",
         price: "₹354",
-        image: "KatanayaNPK19.webp",
+        image: "assets/images/KatanayaNPK19.webp",
         category: "NPK Fertilizer"
     },
     {
@@ -419,7 +419,7 @@ const products = [
         name: "KATYAYANI NPK 20:20:20",
         company: "Katyayani Organics",
         price: "₹495",
-        image: "KatanayaNPK.webp",
+        image: "assets/images/KatanayaNPK.webp",
         category: "NPK Fertilizer"
     },
     {
@@ -427,7 +427,7 @@ const products = [
         name: "Nano Fert 19:19:19",
         company: "Geolife Agritech India Pvt Ltd.",
         price: "₹799",
-        image: "geonano.webp",
+        image: "assets/images/geonano.webp",
         category: "NPK Fertilizer"
     },
     {
@@ -435,7 +435,7 @@ const products = [
         name: "Nanofert 13:00:45 Fertilizer",
         company: "Geolife Agritech India Pvt Ltd.",
         price: "₹890",
-        image: "NPK13.webp",
+        image: "assets/images/NPK13.webp",
         category: "NPK Fertilizer"
     },
     {
@@ -443,7 +443,7 @@ const products = [
         name: "Nanofert 00:52:34 NPK Fertilizer",
         company: "Geolife Agritech India Pvt Ltd.",
         price: "₹1250",
-        image: "NPK00.webp",
+        image: "assets/images/NPK00.webp",
         category: "NPK Fertilizer"
     },
     {
@@ -451,7 +451,7 @@ const products = [
         name: "Enhancer NPK",
         company: "Loki.Labs",
         price: "₹2000",
-        image: "Planten.jpg",
+        image: "assets/images/Planten.jpg",
         category: "NPK Fertilizer"
     },
     {
@@ -459,7 +459,7 @@ const products = [
         name: "All purpose NPK",
         company: "Loki.Labs",
         price: "₹1170",
-        image: "NPK10.10.jpg",
+        image: "assets/images/NPK10.10.jpg",
         category: "NPK Fertilizer"
     },
     {
@@ -467,7 +467,7 @@ const products = [
         name: "Notore 46:0:0 NPK",
         company: "Notore Labs",
         price: "₹2834",
-        image: "NPK46.png",
+        image: "assets/images/NPK46.png",
         category: "NPK Fertilizer"
     },
     {
@@ -475,7 +475,7 @@ const products = [
         name: "Powerpack 20-20-20 NPK Fertilizer",
         company: "PowerPandi",
         price: "₹560",
-        image: "Powerpack20.jpg",
+        image: "assets/images/Powerpack20.jpg",
         category: "NPK Fertilizer"
     },
     {
@@ -483,7 +483,7 @@ const products = [
         name: "The Andereson NPK 10-10-10",
         company: "The Andereson",
         price: "₹699",
-        image: "Andre10.jpg",
+        image: "assets/images/Andre10.jpg",
         category: "NPK Fertilizer"
     },
     // Plant Growth Promoters products
@@ -492,7 +492,7 @@ const products = [
         name: "Liquid Seaweed",
         company: "Anand Agro Care",
         price: "₹539",
-        image: "AnandAgroSeaRubyLiquidSeaweed.png",
+        image: "assets/images/AnandAgroSeaRubyLiquidSeaweed.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -500,7 +500,7 @@ const products = [
         name: "Bhumi JET-100",
         company: "Bhumi Agro Industries",
         price: "₹199",
-        image: "BhumiJET-100.png",
+        image: "assets/images/BhumiJET-100.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -508,7 +508,7 @@ const products = [
         name: "Amino 17",
         company: "West Coast Herbochem",
         price: "₹226",
-        image: "Amino-17.png",
+        image: "assets/images/Amino-17.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -516,7 +516,7 @@ const products = [
         name: "Amruth Alzyme",
         company: "Amruth Organic",
         price: "₹503",
-        image: "AmruthAlzyme.png",
+        image: "assets/images/AmruthAlzyme.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -524,7 +524,7 @@ const products = [
         name: "Falcon Growth Promoter",
         company: "Multiplex",
         price: "₹130",
-        image: "Falcon.png",
+        image: "assets/images/Falcon.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -532,7 +532,7 @@ const products = [
         name: "V-Hume Promoter",
         company: "Vanproz",
         price: "₹309",
-        image: "V-hume.png",
+        image: "assets/images/V-hume.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -540,7 +540,7 @@ const products = [
         name: "Planofix Promoter",
         company: "Bayer",
         price: "₹117",
-        image: "Planofix.png",
+        image: "assets/images/Planofix.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -548,7 +548,7 @@ const products = [
         name: "Bahaar Promoter",
         company: "Tata Rallis",
         price: "₹283",
-        image: "Bahaar.png",
+        image: "assets/images/Bahaar.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -556,7 +556,7 @@ const products = [
         name: "Quantis Biostimulant",
         company: "Syngenta",
         price: "₹120",
-        image: "QuantisBiostimulant.png",
+        image: "assets/images/QuantisBiostimulant.png",
         category: "Plant Growth Promoter"
     },
     {
@@ -564,7 +564,7 @@ const products = [
         name: "Allure Growth Promoter",
         company: "Agrinos",
         price: "₹699",
-        image: "Allure.png",
+        image: "assets/images/Allure.png",
         category: "Plant Growth Promoter"
     },
     // Yield Boosters products
@@ -573,7 +573,7 @@ const products = [
         name: "Vibrant Growrich",
         company: "Vibrant Life",
         price: "₹1000",
-        image: "VIBRANTGROWRICH.png",
+        image: "assets/images/VIBRANTGROWRICH.png",
         category: "Yield Booster"
     },
     {
@@ -581,7 +581,7 @@ const products = [
         name: "Prime Aavirat",
         company: "Bioprime",
         price: "₹678",
-        image: "PRIMEAAVIRATGROWTHBOOSTER.png",
+        image: "assets/images/PRIMEAAVIRATGROWTHBOOSTER.png",
         category: "Yield Booster"
     },
     {
@@ -589,7 +589,7 @@ const products = [
         name: "Prime Chiron",
         company: "Bioprime",
         price: "₹270",
-        image: "primechiron.png",
+        image: "assets/images/primechiron.png",
         category: "Yield Booster"
     },
     {
@@ -597,7 +597,7 @@ const products = [
         name: "Venus Proteinx 50",
         company: "Venus Agro Chemicals",
         price: "₹200",
-        image: "proteinx.png",
+        image: "assets/images/proteinx.png",
         category: "Yield Booster"
     },
     {
@@ -605,7 +605,7 @@ const products = [
         name: "Godrej Double",
         company: "Godrej Agrovet",
         price: "₹340",
-        image: "godrejdouble.png",
+        image: "assets/images/godrejdouble.png",
         category: "Yield Booster"
     },
     {
@@ -613,7 +613,7 @@ const products = [
         name: "Agroveer (vegetables)",
         company: "Sethu Farmer Producer",
         price: "₹120",
-        image: "agroveer.png",
+        image: "assets/images/agroveer.png",
         category: "Yield Booster"
     },
     {
@@ -621,7 +621,7 @@ const products = [
         name: "Agroveer (fruits)",
         company: "Sethu Farmer Producer",
         price: "₹134",
-        image: "agroveerfruits.png",
+        image: "assets/images/agroveerfruits.png",
         category: "Yield Booster"
     },
     {
@@ -629,7 +629,7 @@ const products = [
         name: "Bioprime Prime Fast 10",
         company: "Bioprime",
         price: "₹230",
-        image: "fast10.png",
+        image: "assets/images/fast10.png",
         category: "Yield Booster"
     },
     {
@@ -637,7 +637,7 @@ const products = [
         name: "Prime Fortisea",
         company: "Bioprime",
         price: "₹200",
-        image: "primefortisea.png",
+        image: "assets/images/primefortisea.png",
         category: "Yield Booster"
     },
     {
@@ -645,7 +645,7 @@ const products = [
         name: "Geolife Vigore",
         company: "Geolife Agritech India",
         price: "₹480",
-        image: "vigore.png",
+        image: "assets/images/vigore.png",
         category: "Yield Booster"
     }
 ];

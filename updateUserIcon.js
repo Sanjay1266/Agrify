@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ✅ Check if user is logged in (by checking token)
     if (localStorage.getItem("token")) {
-        updateFavicon("default-user.png"); // Change favicon to user icon
+        updateFavicon("assets/images/default-user.png"); // Change favicon to user icon
     }
 
     const logoutButton = document.getElementById("logout");
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log("Logging out...");
 
             // ✅ Restore favicon to default
-            updateFavicon("favicon.ico");
+            updateFavicon("assets/images/icon.png");
 
             // ✅ Clear user data
             localStorage.clear();

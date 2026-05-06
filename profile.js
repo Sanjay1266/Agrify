@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", async function () {
             document.getElementById("username").textContent = user.username;
 
             // ✅ Replace FontAwesome icon with default user image
-            userIcon.outerHTML = `<img id="user-icon" src="${user.icon || 'default-user.png'}" 
+            userIcon.outerHTML = `<img id="user-icon" src="${user.icon || 'assets/images/default-user.png'}" 
                 alt="User Profile" width="40px" height="40px" style="border-radius: 50%;">`;
 
         } else {
