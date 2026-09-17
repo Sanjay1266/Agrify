@@ -1,0 +1,330 @@
+/* ==========================================================================
+   AGRIFY - Farming Guide & Crop Doctor Stylesheet
+   ========================================================================== */
+
+.guide-hero {
+  background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+  color: var(--white);
+  padding: 3.5rem 0;
+  text-align: center;
+}
+
+.guide-hero h1 {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 800;
+  margin-bottom: 0.75rem;
+}
+
+.guide-hero p {
+  color: var(--accent-100);
+  font-size: 1.1rem;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+/* Main Layout */
+.guide-layout-section {
+  padding: 3rem 0 5rem;
+}
+
+.guide-layout-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 2.5rem;
+  align-items: flex-start;
+}
+
+/* Plants Sidebar */
+.plant-nav-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 100px;
+}
+
+.plant-nav-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  color: var(--gray-900);
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.crop-search-input {
+  width: 100%;
+  padding: 0.55rem 0.85rem;
+  border: 1.5px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 0.88rem;
+  margin-bottom: 1rem;
+  outline: none;
+}
+
+.crop-search-input:focus {
+  border-color: var(--accent-500);
+}
+
+.plant-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.plant-tab-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md);
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-align: left;
+}
+
+.plant-tab-item:hover {
+  background: var(--accent-50);
+  border-color: var(--accent-300);
+}
+
+.plant-tab-item.active {
+  background: var(--primary-800);
+  border-color: var(--primary-800);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(16, 59, 43, 0.2);
+}
+
+.plant-tab-thumb {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--white);
+  flex-shrink: 0;
+}
+
+.plant-tab-name {
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
+/* Crop Content Display */
+.crop-content-panel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.crop-content-panel.active {
+  display: block;
+}
+
+.crop-header-banner {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.crop-headline h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--primary-900);
+  margin-bottom: 0.35rem;
+}
+
+.crop-headline .crop-subtitle {
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  font-style: italic;
+}
+
+.crop-metric-pills {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.crop-metric-item {
+  text-align: center;
+  background: var(--gray-50);
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+}
+
+.crop-metric-label {
+  font-size: 0.75rem;
+  color: var(--gray-500);
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.crop-metric-value {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--primary-800);
+}
+
+/* Guide Sections */
+.guide-card-block {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--gray-200);
+  padding: 2.25rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.guide-card-block h3 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.guide-card-block h3 i {
+  color: var(--accent-500);
+}
+
+/* Growth Stages Timeline */
+.growth-stages-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.stage-step-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border-top: 4px solid var(--accent-500);
+  border-left: 1px solid var(--gray-200);
+  border-right: 1px solid var(--gray-200);
+  border-bottom: 1px solid var(--gray-200);
+}
+
+.stage-number-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  background: var(--primary-800);
+  color: var(--white);
+  padding: 0.15rem 0.6rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 0.5rem;
+}
+
+.stage-step-card h4 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--gray-900);
+  margin-bottom: 0.5rem;
+}
+
+.stage-step-card p {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* Disease Diagnostic Table / Grid */
+.disease-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.disease-card {
+  background: var(--gray-50);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--gray-200);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.disease-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.65rem;
+}
+
+.disease-name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.disease-card p {
+  font-size: 0.88rem;
+  color: var(--gray-600);
+  line-height: 1.6;
+  margin-bottom: 0.85rem;
+}
+
+.recommended-cure-box {
+  margin-top: auto;
+  background: var(--accent-50);
+  border: 1px solid var(--accent-300);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.recommended-cure-box strong {
+  color: var(--primary-800);
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.recommended-cure-box a {
+  color: var(--primary-700);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .guide-layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .plant-nav-card {
+    position: static;
+  }
+  .plant-items-list {
+    flex-direction: row;
+    overflow-x: auto;
+    max-height: none;
+    padding-bottom: 0.5rem;
+  }
+  .growth-stages-grid, .disease-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
