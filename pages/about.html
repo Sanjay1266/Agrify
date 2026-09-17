@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Agrify Modern Farming Solutions</title>
+  <meta name="description" content="Discover Agrify's mission to bridge traditional agricultural practices and modern agricultural technology. Meet our agronomy leadership team.">
+  
+  <link rel="icon" href="../assets/images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  
+  <style>
+    .about-hero {
+      background: linear-gradient(135deg, var(--primary-900), var(--primary-800));
+      color: var(--white);
+      padding: 4.5rem 0;
+      text-align: center;
+    }
+    .about-hero h1 {
+      font-family: var(--font-display);
+      font-size: 2.8rem;
+      font-weight: 800;
+      margin-bottom: 0.75rem;
+    }
+    .about-hero p {
+      color: var(--accent-100);
+      font-size: 1.15rem;
+      max-width: 620px;
+      margin: 0 auto;
+    }
+
+    .story-section {
+      padding: 5rem 0;
+      background: var(--white);
+    }
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3.5rem;
+      align-items: center;
+    }
+    .story-content h2 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--primary-900);
+      margin-bottom: 1.25rem;
+    }
+    .story-content p {
+      color: var(--gray-600);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+    .story-image-card {
+      background: var(--accent-50);
+      border-radius: var(--radius-lg);
+      padding: 2.5rem;
+      text-align: center;
+      border: 1px solid var(--accent-200);
+    }
+    .story-image-card img {
+      max-height: 260px;
+      margin: 0 auto;
+    }
+
+    /* Team Section */
+    .team-section {
+      padding: 5rem 0;
+      background: var(--gray-50);
+    }
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.25rem;
+      margin-top: 3rem;
+    }
+    .team-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      padding: 2.25rem 1.75rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+    }
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--accent-400);
+    }
+    .team-avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      border: 4px solid var(--accent-100);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    }
+    .team-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      color: var(--gray-900);
+      margin-bottom: 0.35rem;
+      font-weight: 700;
+    }
+    .team-role {
+      color: var(--primary-700);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+    .team-bio {
+      color: var(--gray-600);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 900px) {
+      .story-grid, .team-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          <a href="store.html" class="nav-link"><i class="fas fa-store"></i> Products</a>
+          <a href="farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
+          <a href="about.html" class="nav-link active"><i class="fas fa-info-circle"></i> About</a>
+          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="store.html" class="header-action-btn" title="Search"><i class="fas fa-search"></i></a>
+          <a href="checkout.html" class="header-action-btn" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" style="display: none;">0</span>
+          </a>
+          <div class="user-menu-wrapper">
+            <div class="user-profile-trigger" id="user-profile-trigger">
+              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
+              <span class="user-display-name">Account</span>
+              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
+          </div>
+          <div class="mobile-toggle" id="mobile-toggle">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>Empowering Indian Agriculture</h1>
+      <p>Bridging traditional farming knowledge with cutting-edge agrochemical science and transparent supply chains.</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content">
+          <span class="badge badge-green" style="margin-bottom: 0.75rem;">Our Story</span>
+          <h2>Revolutionizing Farm Health & Yields Since 2015</h2>
+          <p>
+            Welcome to <strong>Agrify</strong>, your trusted partner in modern farming. Our journey began with a simple mission: to bridge the gap between traditional agricultural methods and modern scientific technology.
+          </p>
+          <p>
+            What started as a focused group of agricultural enthusiasts and engineers has grown into a comprehensive agricultural platform serving thousands of farmers across India. Our passion for sustainable practices and commitment to certified product quality has made Agrify the preferred partner for growers of every scale.
+          </p>
+          <p>
+            We understand the challenges faced by today's farmers—erratic rainfall, soil nutrient depletion, pest resistance, and logistical barriers. Agrify is dedicated to delivering proven formulations and actionable crop advice right to your fingertips.
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 2rem;">
+            <a href="store.html" class="btn btn-primary">Browse Catalog</a>
+            <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="story-image-card">
+          <img src="../assets/images/icon.png" alt="Agrify Symbol">
+          <h3 style="font-family: var(--font-display); font-size: 1.4rem; color: var(--primary-900); margin-top: 1rem;">
+            Agrify Farming Ecosystem
+          </h3>
+          <p style="color: var(--gray-600); font-size: 0.9rem; margin-top: 0.5rem;">
+            Certified Formulations &middot; Agronomist Advisory &middot; Rural Doorstep Delivery
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="team-section">
+    <div class="container">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto;">
+        <span class="badge badge-green" style="margin-bottom: 0.5rem;">Leadership Team</span>
+        <h2 style="font-family: var(--font-display); font-size: 2.2rem; color: var(--primary-900); font-weight: 800;">
+          Meet Our Agricultural Experts
+        </h2>
+        <p style="color: var(--gray-600); font-size: 1rem; margin-top: 0.5rem;">
+          Dedicated agricultural scientists, technology enthusiasts, and field agronomists committed to farmer prosperity.
+        </p>
+      </div>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="../assets/images/nanthana.jpg" alt="Shri Nanthana R P" class="team-avatar">
+          <h3>Shri Nanthana R P</h3>
+          <div class="team-role">Head of R&D</div>
+          <p class="team-bio">
+            Specializing in agricultural sciences and bio-stimulants, leading our product validation for sustainable soil and plant health.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <img src="../assets/images/sanjay.jpg" alt="Sanjay Sundaram" class="team-avatar">
+          <h3>Sanjay Sundaram</h3>
+          <div class="team-role">Head of Product Development</div>
+          <p class="team-bio">
+            Agricultural engineer with a passion for designing eco-friendly farming solutions, digital agronomy, and modern platform architecture.
+          </p>
+        </div>
+
+        <div class="team-card">
+          <img src="../assets/images/elakiya.jpg" alt="Elakiya" class="team-avatar">
+          <h3>Elakiya</h3>
+          <div class="team-role">Agricultural Specialist</div>
+          <p class="team-bio">
+            Field expert in precision crop management, integrated pest management (IPM), and organic nutrient enrichment schedules.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+            <span>Agrify<span class="accent">.</span></span>
+          </a>
+          <p>Scientific agricultural research made accessible for modern cultivators across India.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
+            <li><a href="farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Support</h4>
+          <ul class="footer-links">
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+            <li><a href="checkout.html"><i class="fas fa-chevron-right"></i> Track Orders</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h4 class="footer-heading">Office</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Asgaard, India</p>
+          <p><i class="fas fa-envelope"></i> info@agrify.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agrify. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

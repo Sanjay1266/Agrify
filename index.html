@@ -1,168 +1,654 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrify- Modern Farming Solutions</title>
-    <link rel="stylesheet" href="Styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="icon" href="assets/images/icon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrify | Modern Farming Solutions & Agricultural Store</title>
+  <meta name="description" content="Agrify empowers modern farmers with high-yield fertilizers, certified insecticides, biostimulants, and expert crop disease guides.">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/icon.png" type="image/png">
+  
+  <!-- FontAwesome & Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/store.css">
+
+  <style>
+    /* Homepage Specific Aesthetics */
+    .hero-banner {
+      background: linear-gradient(135deg, var(--primary-900) 0%, var(--primary-800) 60%, var(--primary-700) 100%);
+      color: var(--white);
+      padding: 5.5rem 0 4.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-banner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 5%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.15);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      color: var(--accent-300);
+      padding: 0.35rem 0.9rem;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+    .hero-title span {
+      color: var(--accent-400);
+    }
+    .hero-subtext {
+      font-size: 1.15rem;
+      color: var(--gray-300);
+      line-height: 1.7;
+      margin-bottom: 2.25rem;
+      max-width: 540px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .hero-graphic-card {
+      background: rgba(255, 255, 255, 0.06);
+      backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-lg);
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    }
+    .hero-graphic-card img {
+      max-height: 280px;
+      margin: 0 auto 1.5rem;
+      filter: drop-shadow(0 15px 25px rgba(0,0,0,0.35));
+    }
+    .hero-stats-ribbon {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .hero-stat-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--accent-400);
+      font-weight: 800;
+    }
+    .hero-stat-item span {
+      font-size: 0.88rem;
+      color: var(--gray-300);
+    }
+
+    /* Benefits Section */
+    .benefits-section {
+      padding: 4.5rem 0;
+      background: var(--white);
+    }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    .benefit-card {
+      padding: 1.75rem;
+      border-radius: var(--radius-md);
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      transition: all var(--transition-normal);
+    }
+    .benefit-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-300);
+      background: var(--white);
+    }
+    .benefit-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: var(--radius-md);
+      background: var(--accent-100);
+      color: var(--primary-800);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+    .benefit-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--gray-900);
+      margin-bottom: 0.5rem;
+      font-weight: 700;
+    }
+    .benefit-card p {
+      font-size: 0.9rem;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* Category Showcase */
+    .category-showcase-section {
+      padding: 4.5rem 0;
+      background: var(--gray-50);
+    }
+    .section-head-centered {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 3rem;
+    }
+    .section-head-centered h2 {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--primary-900);
+      margin-bottom: 0.5rem;
+    }
+    .section-head-centered p {
+      color: var(--gray-600);
+      font-size: 1.05rem;
+    }
+    .category-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .cat-shortcut-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--gray-200);
+      padding: 1.75rem 1.25rem;
+      text-align: center;
+      transition: all var(--transition-normal);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+    }
+    .cat-shortcut-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--accent-400);
+    }
+    .cat-shortcut-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: var(--accent-50);
+      color: var(--primary-700);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      border: 1px solid var(--accent-200);
+      transition: all var(--transition-fast);
+    }
+    .cat-shortcut-card:hover .cat-shortcut-icon {
+      background: var(--primary-800);
+      color: var(--white);
+    }
+    .cat-shortcut-card h4 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--gray-900);
+      margin-bottom: 0.35rem;
+      font-weight: 700;
+    }
+    .cat-shortcut-card span {
+      font-size: 0.85rem;
+      color: var(--gray-500);
+    }
+
+    /* Crop Doctor CTA */
+    .crop-doctor-cta-section {
+      padding: 4.5rem 0;
+      background: linear-gradient(135deg, #092c1e 0%, var(--primary-800) 100%);
+      color: var(--white);
+      position: relative;
+    }
+    .cta-inner-card {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 3rem;
+      align-items: center;
+    }
+    .cta-inner-card h2 {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cta-inner-card p {
+      color: var(--accent-100);
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid, .cta-inner-card {
+        grid-template-columns: 1fr;
+      }
+      .benefits-grid, .category-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero-stats-ribbon {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero-title {
+        font-size: 2.3rem;
+      }
+    }
+    @media (max-width: 550px) {
+      .benefits-grid, .category-cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="logo">Farming Products</div>
-        <nav>
-            <div id="mobile-menu" class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu" id="nav-menu">
+          <a href="index.html" class="nav-link active"><i class="fas fa-home"></i> Home</a>
+          
+          <div class="nav-item-has-dropdown">
+            <a href="pages/store.html" class="nav-link">
+              <i class="fas fa-store"></i> Products <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="pages/store.html?category=Insecticide"><span>Insecticides</span> <i class="fas fa-bug"></i></a>
+              <a href="pages/store.html?category=Fungicide"><span>Fungicides</span> <i class="fas fa-shield-virus"></i></a>
+              <a href="pages/store.html?category=Herbicide"><span>Herbicides</span> <i class="fas fa-seedling"></i></a>
+              <a href="pages/store.html?category=NPK+Fertilizer"><span>NPK Fertilizers</span> <i class="fas fa-vial"></i></a>
+              <a href="pages/store.html?category=Humic+Nutrient"><span>Humic Nutrients</span> <i class="fas fa-spa"></i></a>
+              <a href="pages/store.html?category=Plant+Growth+Promoter"><span>Growth Promoters</span> <i class="fas fa-chart-line"></i></a>
+              <a href="pages/store.html?category=Yield+Booster"><span>Yield Boosters</span> <i class="fas fa-award"></i></a>
+              <a href="pages/store.html" style="font-weight: 700; color: var(--accent-500);"><span>View All 80+ Products &rarr;</span></a>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="secondpart.html">New to Farming</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="aboutus.html">About</a></li>
-                <li><a href="contactus.html">Contact</a></li>
-                <li><a href="Checkout.html">Orders</a></li>
-                <li class="usermenu"> <i class="fa-solid fa-user"></i>
-                    <div class="user-dropdown" id="dropdown-menu">
-                        <a href="profile.html">Profile</a>
-                        <a href="#" id="logout">Logout</a>
-                    </div></li>
-            </ul>
+          </div>
+
+          <a href="pages/farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
+          <a href="pages/about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+          <a href="pages/contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
         </nav>
-    </header>
-    
-    <main>
-        <section id="home" class="hero">
-            <h1>Premium Farming Solutions</h1>
-            <p>Quality products for better crop yield and plant health</p>
-            <a href="#products" class="cta-button">Shop Now</a>
-        </section>
-        
-        <section id="products" class="products-section">
-            <h2>Our Products</h2>
-            
-            <!-- Category Filter Buttons -->
-            <div class="filter-container">
-                <button class="filter-btn active" onclick="location.href='insecticide.html'">All Products</button>
-                <button class="filter-btn" onclick="location.href='Insecticide.html'">Insecticide</button>
-                <button class="filter-btn" onclick="location.href='Fungicide.html'">Fungicide</button>
-                <button class="filter-btn" onclick="location.href='NPKFertilizers.html'">NPK Fertilizer</button>
-                <button class="filter-btn" onclick="location.href='HumicNutrients.html'">Humic Nutrient</button>
-                <button class="filter-btn" onclick="location.href='Nematicides.html'">Nematicide</button>
-                <button class="filter-btn" onclick="location.href='PlantGrowthPromoters.html'">Plant Growth Promoter</button>
-                <button class="filter-btn" onclick="location.href='YieldBoosters.html'">Yield Booster</button>
+
+        <!-- Right Header Actions -->
+        <div class="header-actions">
+          <a href="pages/store.html" class="header-action-btn" title="Search Catalog">
+            <i class="fas fa-search"></i>
+          </a>
+
+          <!-- Cart Action -->
+          <a href="pages/checkout.html" class="header-action-btn" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" style="display: none;">0</span>
+          </a>
+
+          <!-- User Profile Dropdown -->
+          <div class="user-menu-wrapper">
+            <div class="user-profile-trigger" id="user-profile-trigger">
+              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
+              <span class="user-display-name">Account</span>
+              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
             </div>
-            
-            <!-- Product Grid -->
-            <div id="product-list" class="product-grid"></div>
-            
-            <!-- Load More Button -->
-            <div class="load-more-container">
-                <button class="load-more">Load More</button>
+            <div class="user-dropdown-menu" id="user-dropdown-menu">
+              <!-- Populated dynamically by main.js -->
             </div>
-        </section>
-        
-        <section id="about" class="about">
-            <h2>About Us</h2>
-            <p>We are dedicated to providing high-quality agricultural products to help farmers achieve better yields and healthier crops. Our extensive range includes insecticides, fungicides, herbicides, fertilizers, and more.</p>
-        </section>
-        
-        <section id="contact" class="contact">
-            <h2>Get in Touch</h2>
-            <form id="contactForm" onsubmit="return validate()" onreset="resetForm()">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name">
-                    <span id="name-error" class="error"></span>
-                </div>
-                
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="text" id="email" name="email">
-                    <span id="email-error" class="error"></span>
-                </div>
-                
-                <div class="form-group">
-                    <label for="message">Message:</label>
-                    <textarea id="message" name="message"></textarea>
-                    <span id="message-error" class="error"></span>
-                </div>
-                
-                <input type="submit" value="Send Message" class="submit-btn">
-                <input type="reset" value="Reset" class="reset-btn">
-            </form>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="aboutus.html">About</a></li>
-                    <li><a href="contactus.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Asgaard</p>
-                <p><i class="fas fa-phone"></i>  +91 8807522326, +91 9361682841</p>
-                <p><i class="fas fa-envelope"></i> info@agrify.com</p>
-            </div>
+          </div>
+
+          <!-- Mobile Toggle Button -->
+          <div class="mobile-toggle" id="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p> @ 2022 Agrify. All rights reserved.</p>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-banner">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <div class="hero-badge">
+            <i class="fas fa-award"></i> Trusted by 10,000+ Indian Farmers
+          </div>
+          <h1 class="hero-title">
+            Grow Healthier Crops with <span>Agrify Solutions</span>
+          </h1>
+          <p class="hero-subtext">
+            India's dedicated agricultural marketplace. Access genuine insecticides, organic fertilizers, crop boosters, and scientific crop management guides all in one place.
+          </p>
+          <div class="hero-actions">
+            <a href="pages/store.html" class="btn btn-accent btn-lg">
+              <i class="fas fa-shopping-basket"></i> Explore 80+ Products
+            </a>
+            <a href="pages/farming-guide.html" class="btn btn-secondary btn-lg">
+              <i class="fas fa-seedling"></i> Crop Disease Doctor
+            </a>
+          </div>
         </div>
-    </footer>
-    <script>
-        function validate() {
-            let isValid = true;
 
-            const name = document.getElementById("name").value.trim();
-            const email = document.getElementById("email").value.trim();
-            const message = document.getElementById("message").value.trim();
-            
-            const nameError = document.getElementById("name-error");
-            const emailError = document.getElementById("email-error");
-            const messageError = document.getElementById("message-error");
-            
-            nameError.innerHTML = "";
-            emailError.innerHTML = "";
-            messageError.innerHTML = "";
-            
-            const nameRegex = /^[a-zA-Z ]{3,}$/;
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (!nameRegex.test(name)) {
-                nameError.innerHTML = "Name must contain only letters and spaces, with at least 3 characters.";
-                isValid = false;
-            }
+        <div class="hero-graphic-card">
+          <img src="assets/images/Coragen.webp" alt="Agrify Featured Crop Protection">
+          <div style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.35rem;">
+            Coragen &reg; Advanced Protection
+          </div>
+          <p style="font-size: 0.88rem; color: var(--gray-300); margin-bottom: 1rem;">
+            Long-duration systemic defense against stem borers and caterpillars.
+          </p>
+          <a href="pages/product-details.html?id=1" class="btn btn-accent btn-sm">
+            View Product Details
+          </a>
+        </div>
+      </div>
 
-            if (!emailRegex.test(email)) {
-                emailError.innerHTML = "Please enter a valid email address.";
-                isValid = false;
-            }
+      <!-- Stats Ribbon -->
+      <div class="hero-stats-ribbon">
+        <div class="hero-stat-item">
+          <strong>80+</strong>
+          <span>Verified Formulas</span>
+        </div>
+        <div class="hero-stat-item">
+          <strong>100%</strong>
+          <span>Genuine Brand Guarantee</span>
+        </div>
+        <div class="hero-stat-item">
+          <strong>24-48h</strong>
+          <span>Express Rural Dispatch</span>
+        </div>
+        <div class="hero-stat-item">
+          <strong>4.8 / 5</strong>
+          <span>Farmer Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            if (message.length < 10) {
-                messageError.innerHTML = "Message must be at least 10 characters long.";
-                isValid = false;
-            }
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-certificate"></i></div>
+          <h3>100% Certified</h3>
+          <p>Every product is sourced straight from licensed manufacturers like FMC, Bayer, Syngenta, and UPL.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-truck-fast"></i></div>
+          <h3>Direct Delivery</h3>
+          <p>Carefully packaged and delivered straight to village and farm doorsteps with free shipping over ₹500.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-user-doctor"></i></div>
+          <h3>Agronomist Guidance</h3>
+          <p>Comprehensive crop disease diagnosis, dosage calculators, and seasonal spraying calendars.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-icon"><i class="fas fa-shield-halved"></i></div>
+          <h3>Safe Payments</h3>
+          <p>Support for UPI, Net Banking, Debit/Credit Cards, and Cash on Delivery with full buyer protection.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            return isValid;
-        }
+  <!-- Category Showcase -->
+  <section class="category-showcase-section">
+    <div class="container">
+      <div class="section-head-centered">
+        <h2>Explore By Product Category</h2>
+        <p>Targeted solutions for pest eradication, fungal defense, and balanced plant nutrition.</p>
+      </div>
+
+      <div class="category-cards-grid">
+        <a href="pages/store.html?category=Insecticide" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-bug"></i></div>
+          <h4>Insecticides</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=Fungicide" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-shield-virus"></i></div>
+          <h4>Fungicides</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=Herbicide" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-seedling"></i></div>
+          <h4>Herbicides</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=NPK+Fertilizer" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-vial"></i></div>
+          <h4>NPK Fertilizers</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=Humic+Nutrient" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-spa"></i></div>
+          <h4>Humic Nutrients</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=Nematicide" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-worm"></i></div>
+          <h4>Nematicides</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=Plant+Growth+Promoter" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-chart-line"></i></div>
+          <h4>Growth Promoters</h4>
+          <span>10 Formulations</span>
+        </a>
+        <a href="pages/store.html?category=Yield+Booster" class="cat-shortcut-card">
+          <div class="cat-shortcut-icon"><i class="fas fa-award"></i></div>
+          <h4>Yield Boosters</h4>
+          <span>10 Formulations</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="catalog-section" style="background: var(--white);">
+    <div class="container">
+      <div class="section-head-centered">
+        <h2>Featured Farmer Essentials</h2>
+        <p>Hand-picked, high-efficacy formulas trusted by farmers across every region.</p>
+      </div>
+
+      <div class="product-grid" id="homepage-featured-grid">
+        <!-- Populated via script -->
+      </div>
+
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="pages/store.html" class="btn btn-primary btn-lg">
+          View Entire 80-Product Catalog <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Crop Doctor CTA -->
+  <section class="crop-doctor-cta-section">
+    <div class="container">
+      <div class="cta-inner-card">
+        <div>
+          <span class="badge badge-green" style="margin-bottom: 0.75rem;">Interactive Learning</span>
+          <h2>New to Modern Farming? Inspect Plant Diseases Fast.</h2>
+          <p>
+            Whether cultivating banana suckers, paddy fields, tomato vines, or turmeric rhizomes, our interactive crop guide walks you through growth stages, pest symptoms, and precision treatment dosages.
+          </p>
+          <a href="pages/farming-guide.html" class="btn btn-accent btn-lg">
+            <i class="fas fa-microscope"></i> Open Farming Guide
+          </a>
+        </div>
+        <div style="text-align: center;">
+          <img src="assets/images/Riceplantimage.jpg" alt="Paddy crop doctor" style="border-radius: var(--radius-lg); border: 3px solid rgba(255,255,255,0.2); max-height: 280px; width: auto; margin: 0 auto; box-shadow: var(--shadow-xl);">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
         
-        function resetForm() {
-            document.getElementById("name-error").innerHTML = "";
-            document.getElementById("email-error").innerHTML = "";
-            document.getElementById("message-error").innerHTML = "";
-        }
-    </script>
-    <!-- Link to our JavaScript file -->
-    <script src="script.js"></script>
-    <script src="updateUserIcon.js"></script>
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+            <span>Agrify<span class="accent">.</span></span>
+          </a>
+          <p>
+            Agrify bridges the gap between traditional agricultural practices and modern biotechnology. Serving over 10,000 farmers nationwide with genuine supplies and agronomist guidance.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="pages/store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
+            <li><a href="pages/farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
+            <li><a href="pages/about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="pages/contact.html"><i class="fas fa-chevron-right"></i> Contact & Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="pages/store.html?category=Insecticide"><i class="fas fa-chevron-right"></i> Insecticides</a></li>
+            <li><a href="pages/store.html?category=Fungicide"><i class="fas fa-chevron-right"></i> Fungicides</a></li>
+            <li><a href="pages/store.html?category=Herbicide"><i class="fas fa-chevron-right"></i> Herbicides</a></li>
+            <li><a href="pages/store.html?category=NPK+Fertilizer"><i class="fas fa-chevron-right"></i> NPK Fertilizers</a></li>
+            <li><a href="pages/store.html?category=Yield+Booster"><i class="fas fa-chevron-right"></i> Yield Boosters</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-contact-info">
+          <h4 class="footer-heading">Farmer Helpline</h4>
+          <p><i class="fas fa-map-marker-alt"></i> Agrify Agricultural Labs, Sector 4, Agri-Tech Zone, India</p>
+          <p><i class="fas fa-phone-alt"></i> +91 88075 22326 / +91 93616 82841</p>
+          <p><i class="fas fa-envelope"></i> support@agrify.com</p>
+          <p><i class="fas fa-clock"></i> Mon - Sat: 8:00 AM - 7:00 PM</p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agrify Modern Farming Solutions. All rights reserved.</div>
+        <div>
+          <a href="pages/about.html" style="color: inherit; margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="pages/about.html" style="color: inherit;">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/cart.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Populate 8 featured products on the homepage
+      const grid = document.getElementById('homepage-featured-grid');
+      if (grid && typeof AgrifyProducts !== 'undefined') {
+        const featured = AgrifyProducts.getFeatured(8);
+        grid.innerHTML = featured.map(p => `
+          <div class="product-card">
+            <div class="product-card-media">
+              <span class="product-category-tag">${p.category}</span>
+              <img src="${p.image}" alt="${p.name}">
+              <div class="product-card-overlay">
+                <button class="overlay-action-btn" data-quick-view="${p.id}" title="Quick View">
+                  <i class="fas fa-eye"></i>
+                </button>
+                <button class="overlay-action-btn" data-add-cart="${p.id}" title="Add to Cart">
+                  <i class="fas fa-cart-plus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="product-card-content">
+              <div class="product-brand">${p.company}</div>
+              <h3 class="product-title"><a href="pages/product-details.html?id=${p.id}">${p.name}</a></h3>
+              <div class="product-rating-row">
+                <div class="product-rating-stars">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="product-rating-text">${p.rating} (${p.reviewsCount})</span>
+              </div>
+              <div class="product-price-row">
+                <div class="price-box">
+                  <span class="current-price">₹${p.price}</span>
+                  <span class="original-price">₹${p.originalPrice}</span>
+                </div>
+                <button class="card-add-cart-btn" data-add-cart="${p.id}">
+                  <i class="fas fa-plus"></i> Add
+                </button>
+              </div>
+            </div>
+          </div>
+        `).join('');
+      }
+    });
+  </script>
 </body>
 </html>
