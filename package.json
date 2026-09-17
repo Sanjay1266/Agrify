@@ -1,10 +1,12 @@
 {
-  "name": "void4",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "agrify",
+  "version": "2.0.0",
+  "description": "Agrify - Modern Agricultural Solutions & Smart Farming Platform",
+  "main": "server/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js"
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [],
   "author": "",
