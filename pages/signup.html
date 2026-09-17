@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Account | Agrify Modern Farming Solutions</title>
+  
+  <link rel="icon" href="../assets/images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/auth.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </a>
+
+        <div class="header-actions">
+          <a href="../index.html" class="btn btn-secondary btn-sm"><i class="fas fa-arrow-left"></i> Back to Store</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Signup Form Wrapper -->
+  <main class="auth-wrapper">
+    <div class="auth-card">
+      
+      <div class="auth-header">
+        <div class="brand-logo" style="justify-content: center; margin-bottom: 0.75rem;">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </div>
+        <h1>Join Agrify</h1>
+        <p>Create a farmer profile to track farm dispatches and receive personalized crop guides.</p>
+      </div>
+
+      <form class="auth-form" id="signup-form">
+        <div class="form-group">
+          <label for="signup-name">Full Name</label>
+          <div class="input-with-icon">
+            <i class="fas fa-id-card"></i>
+            <input type="text" id="signup-name" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+          </div>
+          <span id="name-error" class="error-feedback"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-username">Username or Email</label>
+          <div class="input-with-icon">
+            <i class="fas fa-user"></i>
+            <input type="text" id="signup-username" class="form-control" placeholder="Choose a unique username or email" required autocomplete="username">
+          </div>
+          <span id="username-error" class="error-feedback"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="signup-password">Password</label>
+          <div class="input-with-icon">
+            <i class="fas fa-lock"></i>
+            <input type="password" id="signup-password" class="form-control" placeholder="At least 6 characters" required autocomplete="new-password">
+          </div>
+          <span id="password-error" class="error-feedback"></span>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-lg" id="signup-submit-btn" style="width: 100%; margin-top: 0.5rem;">
+          Create Free Account
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        Already registered with Agrify? <a href="login.html">Sign In Here</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agrify. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/auth.js"></script>
+</body>
+</html>
