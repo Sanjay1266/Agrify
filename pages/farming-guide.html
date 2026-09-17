@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New to Farming & Crop Guide | Agrify</title>
+  <meta name="description" content="Comprehensive crop doctor and agricultural guide for banana, turmeric, tomato, rice, cotton, cauliflower, and cabbage. Disease symptoms, growth stages, and cure dosages.">
+  
+  <link rel="icon" href="../assets/images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/farming-guide.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          <a href="store.html" class="nav-link"><i class="fas fa-store"></i> Products</a>
+          <a href="farming-guide.html" class="nav-link active"><i class="fas fa-book-open"></i> New to Farming</a>
+          <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="store.html" class="header-action-btn" title="Search Catalog"><i class="fas fa-search"></i></a>
+          <a href="checkout.html" class="header-action-btn" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" style="display: none;">0</span>
+          </a>
+          <div class="user-menu-wrapper">
+            <div class="user-profile-trigger" id="user-profile-trigger">
+              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
+              <span class="user-display-name">Account</span>
+              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
+          </div>
+          <div class="mobile-toggle" id="mobile-toggle">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="guide-hero">
+    <div class="container">
+      <h1>Crop Doctor & Farming Handbook</h1>
+      <p>Scientific agronomic guidance tailored for beginners and experienced cultivators alike. Learn growth stages, detect leaf symptoms, and apply precision bio-remedies.</p>
+    </div>
+  </section>
+
+  <!-- Main Layout -->
+  <main class="guide-layout-section">
+    <div class="container">
+      <div class="guide-layout-grid">
+        
+        <!-- Sidebar Crop Selector -->
+        <aside class="plant-nav-card">
+          <h3><i class="fas fa-seedling"></i> Select Crop</h3>
+          <input type="text" id="crop-search-input" class="crop-search-input" placeholder="Search crops...">
+
+          <div class="plant-items-list">
+            <div class="plant-tab-item active" data-plant="banana">
+              <img src="../assets/images/bananaplant.jpeg" alt="Banana" class="plant-tab-thumb">
+              <span class="plant-tab-name">Banana (Vazhai)</span>
+            </div>
+            <div class="plant-tab-item" data-plant="turmeric">
+              <img src="../assets/images/Turmericplant.jpeg" alt="Turmeric" class="plant-tab-thumb">
+              <span class="plant-tab-name">Turmeric (Manjal)</span>
+            </div>
+            <div class="plant-tab-item" data-plant="tomato">
+              <img src="../assets/images/Tomatoplant.jpg" alt="Tomato" class="plant-tab-thumb">
+              <span class="plant-tab-name">Tomato (Thakkali)</span>
+            </div>
+            <div class="plant-tab-item" data-plant="rice">
+              <img src="../assets/images/Riceplantimage.jpg" alt="Rice" class="plant-tab-thumb">
+              <span class="plant-tab-name">Rice / Paddy (Nel)</span>
+            </div>
+            <div class="plant-tab-item" data-plant="cotton">
+              <img src="../assets/images/Cottonplant.jpeg" alt="Cotton" class="plant-tab-thumb">
+              <span class="plant-tab-name">Cotton (Paruthi)</span>
+            </div>
+            <div class="plant-tab-item" data-plant="cauliflower">
+              <img src="../assets/images/Cauliflower.jpeg" alt="Cauliflower" class="plant-tab-thumb">
+              <span class="plant-tab-name">Cauliflower</span>
+            </div>
+            <div class="plant-tab-item" data-plant="cabbage">
+              <img src="../assets/images/Cabbage.jpeg" alt="Cabbage" class="plant-tab-thumb">
+              <span class="plant-tab-name">Cabbage (Muttaikose)</span>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Content Section -->
+        <section class="crop-details-display">
+          
+          <!-- BANANA CONTENT -->
+          <div class="crop-content-panel active" id="banana-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Banana Cultivation</h2>
+                <div class="crop-subtitle">Musa acuminata &middot; Heavy feeder crop with high commercial return</div>
+              </div>
+              <div class="crop-metric-pills">
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Soil pH</div>
+                  <div class="crop-metric-value">6.5 - 7.5</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Ideal Temp</div>
+                  <div class="crop-metric-value">25&deg;C - 32&deg;C</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Crop Cycle</div>
+                  <div class="crop-metric-value">11 - 13 Months</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Stages -->
+            <div class="guide-card-block">
+              <h3><i class="fas fa-chart-line"></i> Critical Growth Stages & Nutrition</h3>
+              <div class="growth-stages-grid">
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 1</span>
+                  <h4>Sucker Planting & Rooting (0-60 Days)</h4>
+                  <p>Select disease-free sword suckers weighing 1.5 - 2 kg. Dip in Carbendazim solution before planting. Apply Humic Acid to foster vigorous root network establishment.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 2</span>
+                  <h4>Vegetative Canopy Phase (60-180 Days)</h4>
+                  <p>Rapid leaf emergence and pseudo-stem thickening. Supply Nitrogen and Potash in split fertigation rounds. Weed control using selective herbicides.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 3</span>
+                  <h4>Bunch Shooting & Sizing (180-330 Days)</h4>
+                  <p>Inflorescence emerges. Remove male buds (denavelling) and spray micronutrient yield boosters (SOP / Agroveer Banana) for plump, uniform fingers.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Diseases -->
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Pest & Disease Diagnostic Guide</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Sigatoka Leaf Spot</span>
+                    <span class="badge badge-amber">Fungal</span>
+                  </div>
+                  <p>Yellowish-brown linear spots on leaves that expand into large necrotic patches, leading to premature leaf death and reduced bunch size.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Apply <a href="store.html?category=Fungicide">Nativo Fungicide</a> or <a href="store.html?category=Fungicide">Amistar Top</a> at 1 ml/L.
+                  </div>
+                </div>
+
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Panama Wilt (Fusarium)</span>
+                    <span class="badge badge-amber">Soil-Borne</span>
+                  </div>
+                  <p>Yellowing of lower leaves progressing upwards, pseudo-stem longitudinal splitting, and reddish-brown discoloration in the vascular ring.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Soil drenching with <a href="store.html?category=Fungicide">Bavistin</a> or copper oxychloride around the base.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TURMERIC CONTENT -->
+          <div class="crop-content-panel" id="turmeric-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Turmeric Cultivation</h2>
+                <div class="crop-subtitle">Curcuma longa &middot; High-value rhizomatous spice with curcumin richness</div>
+              </div>
+              <div class="crop-metric-pills">
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Soil pH</div>
+                  <div class="crop-metric-value">6.0 - 7.5</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Ideal Temp</div>
+                  <div class="crop-metric-value">20&deg;C - 35&deg;C</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Crop Cycle</div>
+                  <div class="crop-metric-value">8 - 9 Months</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-chart-line"></i> Growth Timeline</h3>
+              <div class="growth-stages-grid">
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 1</span>
+                  <h4>Rhizome Sprouting (0-45 Days)</h4>
+                  <p>Treat mother rhizomes with Mancozeb before planting on raised ridges. Mulch immediately with green leaves to preserve moisture.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 2</span>
+                  <h4>Tillering & Leaf Development (45-120 Days)</h4>
+                  <p>Application of secondary earthing up. Regular fertigation of NPK 19:19:19 to induce prolific side tillers.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 3</span>
+                  <h4>Rhizome Maturation (120-240 Days)</h4>
+                  <p>Heavy potassium requirement. Foliar spray of Potash-S and biostimulants to enhance curcumin content and root weight.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Disease Diagnostic & Cure</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Rhizome Rot (Pythium)</span>
+                    <span class="badge badge-amber">Severe</span>
+                  </div>
+                  <p>Collapsing of basal shoots, foul smell, and water-soaked rotting of underground rhizomes during waterlogging.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Drench soil with <a href="store.html?category=Fungicide">Ridomil Gold</a> (2.5 g/L) or <a href="store.html?category=Fungicide">Blue Copper</a>.
+                  </div>
+                </div>
+
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Leaf Spot (Colletotrichum)</span>
+                    <span class="badge badge-amber">Foliar</span>
+                  </div>
+                  <p>Elliptical brown spots with concentric rings on upper leaves, leading to dried leaf margins.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Foliar spray of <a href="store.html?category=Fungicide">Saaf Fungicide</a> at 2 g/L of water.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TOMATO CONTENT -->
+          <div class="crop-content-panel" id="tomato-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Tomato Cultivation</h2>
+                <div class="crop-subtitle">Solanum lycopersicum &middot; Popular nightshade crop requiring proactive pest scouting</div>
+              </div>
+              <div class="crop-metric-pills">
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Soil pH</div>
+                  <div class="crop-metric-value">6.0 - 7.0</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Transplant</div>
+                  <div class="crop-metric-value">25 Days Old</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Crop Cycle</div>
+                  <div class="crop-metric-value">120 - 150 Days</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-chart-line"></i> Growth Timeline</h3>
+              <div class="growth-stages-grid">
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 1</span>
+                  <h4>Nursery & Staking (0-35 Days)</h4>
+                  <p>Raise seedlings in pro-trays with coco peat. Transplant into well-ploughed beds and install bamboo trellising.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 2</span>
+                  <h4>Flowering & Fruit Set (35-75 Days)</h4>
+                  <p>Crucial stage for calcium-boron nutrition to prevent blossom end rot. Spray biostimulants like Planofix for blossom retention.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 3</span>
+                  <h4>Harvest Flush (75-140 Days)</h4>
+                  <p>Multiple pickings of firm, glossy red fruits. Keep soil evenly moist to avoid fruit cracking.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Disease Diagnostic & Cure</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Early & Late Blight</span>
+                    <span class="badge badge-amber">Fungal</span>
+                  </div>
+                  <p>Dark, concentric ring spots on leaves and oily lesions on fruits that rot rapidly in humid monsoon weather.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Fungicide">Kavach</a> or <a href="store.html?category=Fungicide">Cabrio Top</a> at 2 g/L.
+                  </div>
+                </div>
+
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Fruit Borer (Helicoverpa)</span>
+                    <span class="badge badge-amber">Insect Pest</span>
+                  </div>
+                  <p>Caterpillars bore clean round entry holes into green and ripening fruits, consuming inner pulp.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Insecticide">Coragen Insecticide</a> (0.4 ml/L) or <a href="store.html?category=Insecticide">Exponus</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RICE CONTENT -->
+          <div class="crop-content-panel" id="rice-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Rice / Paddy Cultivation</h2>
+                <div class="crop-subtitle">Oryza sativa &middot; India's staple cereal crop requiring water & nitrogen balance</div>
+              </div>
+              <div class="crop-metric-pills">
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Soil</div>
+                  <div class="crop-metric-value">Clayey Loam</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Seed Rate</div>
+                  <div class="crop-metric-value">20 kg / Acre</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Duration</div>
+                  <div class="crop-metric-value">110 - 145 Days</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-chart-line"></i> Critical Crop Stages</h3>
+              <div class="growth-stages-grid">
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 1</span>
+                  <h4>Puddling & Tillering (0-40 Days)</h4>
+                  <p>Puddle field thoroughly. Apply basal DAP and zinc sulphate. Maintain 2-3 cm shallow water level during tillering.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 2</span>
+                  <h4>Panicle Emergence (40-80 Days)</h4>
+                  <p>Flag leaf emergence and panicle development. High potassium requirement (NPK 00:00:50) for maximum grain count.</p>
+                </div>
+                <div class="stage-step-card">
+                  <span class="stage-number-badge">Stage 3</span>
+                  <h4>Milky & Dough Stage (80-120 Days)</h4>
+                  <p>Drain water 10 days before harvest when 85% of panicles turn golden yellow.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Pest Diagnostic & Cure</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Yellow Stem Borer</span>
+                    <span class="badge badge-amber">Larval Pest</span>
+                  </div>
+                  <p>Dead heart in vegetative stage and white earheads at heading stage that pull out effortlessly.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Apply <a href="store.html?category=Insecticide">Coragen Insecticide</a> or <a href="store.html?category=Insecticide">Phoskill</a>.
+                  </div>
+                </div>
+
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Paddy Blast (Magnaporthe)</span>
+                    <span class="badge badge-amber">Severe</span>
+                  </div>
+                  <p>Spindle-shaped lesions with brown borders and grey centers on leaves, nodal rot, and broken panicle necks.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Fungicide">Nativo Fungicide</a> or <a href="store.html?category=Fungicide">Bavistin</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COTTON CONTENT -->
+          <div class="crop-content-panel" id="cotton-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Cotton Cultivation</h2>
+                <div class="crop-subtitle">Gossypium hirsutum &middot; White gold cash crop with integrated bollworm management</div>
+              </div>
+              <div class="crop-metric-pills">
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Soil</div>
+                  <div class="crop-metric-value">Deep Black Soil</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Spacing</div>
+                  <div class="crop-metric-value">90 &times; 60 cm</div>
+                </div>
+                <div class="crop-metric-item">
+                  <div class="crop-metric-label">Duration</div>
+                  <div class="crop-metric-value">150 - 180 Days</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Disease Diagnostic & Cure</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Pink Bollworm & American Bollworm</span>
+                    <span class="badge badge-amber">Severe</span>
+                  </div>
+                  <p>Rosetted flowers, shedding of squares, and bore holes in developing cotton bolls stained with frass.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Insecticide">Ampligo Insecticide</a> or <a href="store.html?category=Insecticide">Solomon</a> at 1 ml/L.
+                  </div>
+                </div>
+
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Whitefly & Sucking Pests</span>
+                    <span class="badge badge-amber">Vector</span>
+                  </div>
+                  <p>Yellowing, crinkling leaves with sooty mold growth due to honeydew secretions, transmitting leaf curl virus.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Insecticide">Pegasus</a> or <a href="store.html?category=Insecticide">Actara</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CAULIFLOWER & CABBAGE -->
+          <div class="crop-content-panel" id="cauliflower-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Cauliflower Cultivation</h2>
+                <div class="crop-subtitle">Brassica oleracea var. botrytis &middot; Curd formation and cole crop protection</div>
+              </div>
+            </div>
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Pests & Diagnostics</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Diamondback Moth (DBM)</span>
+                    <span class="badge badge-amber">Pest</span>
+                  </div>
+                  <p>Larvae feed on undersides of leaves, producing windowing holes and rendering curds unmarketable.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Insecticide">Exponus</a> or <a href="store.html?category=Insecticide">Coragen</a>.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="crop-content-panel" id="cabbage-content">
+            <div class="crop-header-banner">
+              <div class="crop-headline">
+                <h2>Cabbage Cultivation</h2>
+                <div class="crop-subtitle">Brassica oleracea var. capitata &middot; Compact head formation & nutrition</div>
+              </div>
+            </div>
+            <div class="guide-card-block">
+              <h3><i class="fas fa-bug"></i> Pests & Diagnostics</h3>
+              <div class="disease-cards-grid">
+                <div class="disease-card">
+                  <div class="disease-header">
+                    <span class="disease-name">Black Rot (Xanthomonas)</span>
+                    <span class="badge badge-amber">Bacterial</span>
+                  </div>
+                  <p>V-shaped chlorotic to necrotic yellow lesions on leaf margins with black veins.</p>
+                  <div class="recommended-cure-box">
+                    <strong>Recommended Remedy:</strong>
+                    Spray <a href="store.html?category=Fungicide">Blue Copper</a> combined with Streptocycline.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+            <span>Agrify<span class="accent">.</span></span>
+          </a>
+          <p>Scientific agricultural research made accessible for modern cultivators across India.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
+            <li><a href="farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Top Crops</h4>
+          <ul class="footer-links">
+            <li><a href="#banana"><i class="fas fa-chevron-right"></i> Banana</a></li>
+            <li><a href="#turmeric"><i class="fas fa-chevron-right"></i> Turmeric</a></li>
+            <li><a href="#tomato"><i class="fas fa-chevron-right"></i> Tomato</a></li>
+            <li><a href="#rice"><i class="fas fa-chevron-right"></i> Rice / Paddy</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h4 class="footer-heading">Agronomy Helpline</h4>
+          <p><i class="fas fa-phone-alt"></i> +91 88075 22326</p>
+          <p><i class="fas fa-envelope"></i> doctor@agrify.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agrify Modern Farming Solutions. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/farming-guide.js"></script>
+</body>
+</html>
