@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agricultural Store | Agrify - Modern Farming Solutions</title>
+  <meta name="description" content="Browse 80+ certified insecticides, fungicides, herbicides, NPK fertilizers, and plant biostimulants. Free shipping available.">
+  
+  <link rel="icon" href="../assets/images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/store.css">
+</head>
+<body>
+
+  <!-- Site Navigation Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          
+          <div class="nav-item-has-dropdown">
+            <a href="store.html" class="nav-link active">
+              <i class="fas fa-store"></i> Products <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
+            </a>
+            <div class="nav-dropdown">
+              <a href="store.html?category=Insecticide"><span>Insecticides</span> <i class="fas fa-bug"></i></a>
+              <a href="store.html?category=Fungicide"><span>Fungicides</span> <i class="fas fa-shield-virus"></i></a>
+              <a href="store.html?category=Herbicide"><span>Herbicides</span> <i class="fas fa-seedling"></i></a>
+              <a href="store.html?category=NPK+Fertilizer"><span>NPK Fertilizers</span> <i class="fas fa-vial"></i></a>
+              <a href="store.html?category=Humic+Nutrient"><span>Humic Nutrients</span> <i class="fas fa-spa"></i></a>
+              <a href="store.html?category=Plant+Growth+Promoter"><span>Growth Promoters</span> <i class="fas fa-chart-line"></i></a>
+              <a href="store.html?category=Yield+Booster"><span>Yield Boosters</span> <i class="fas fa-award"></i></a>
+              <a href="store.html" style="font-weight: 700; color: var(--accent-500);"><span>View All 80+ Products &rarr;</span></a>
+            </div>
+          </div>
+
+          <a href="farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
+          <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="store.html" class="header-action-btn" title="Search Catalog">
+            <i class="fas fa-search"></i>
+          </a>
+          <a href="checkout.html" class="header-action-btn" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" style="display: none;">0</span>
+          </a>
+          <div class="user-menu-wrapper">
+            <div class="user-profile-trigger" id="user-profile-trigger">
+              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
+              <span class="user-display-name">Account</span>
+              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
+          </div>
+          <div class="mobile-toggle" id="mobile-toggle">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Store Hero Banner with Search -->
+  <section class="store-hero">
+    <div class="container">
+      <div class="store-hero-content">
+        <h1>Official Agricultural Marketplace</h1>
+        <p>Search over 80 verified crop protection chemicals, specialty micronutrients, and bio-stimulants.</p>
+
+        <div class="store-search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="store-search-input" placeholder="Search by crop, pest, brand, or chemical name (e.g. Coragen, Urea, Blight)...">
+          <button type="button" id="store-search-btn">Search</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Pills & Sort Controls -->
+  <section class="store-controls-section">
+    <div class="container">
+      <!-- Category Pills -->
+      <div class="category-pills-wrapper" id="category-pills">
+        <!-- Rendered by store.js -->
+      </div>
+
+      <!-- Secondary Controls -->
+      <div class="filter-bar-secondary">
+        <div class="results-count" id="results-count">
+          Showing <span>0</span> products
+        </div>
+
+        <div class="filter-actions">
+          <div>
+            <label for="brand-select" style="font-size: 0.85rem; color: var(--gray-600); margin-right: 0.35rem; font-weight: 600;">Brand:</label>
+            <select class="filter-select" id="brand-select">
+              <option value="All Brands">All Brands</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="sort-select" style="font-size: 0.85rem; color: var(--gray-600); margin-right: 0.35rem; font-weight: 600;">Sort By:</label>
+            <select class="filter-select" id="sort-select">
+              <option value="featured">Featured & Best Selling</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Customer Rating</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Catalog Grid -->
+  <section class="catalog-section">
+    <div class="container">
+      <div class="product-grid" id="product-grid">
+        <!-- Rendered dynamically by store.js -->
+      </div>
+
+      <div class="pagination-container" id="load-more-container" style="display: none;">
+        <button class="btn btn-secondary btn-lg" id="load-more-btn">
+          Load More Products
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+            <span>Agrify<span class="accent">.</span></span>
+          </a>
+          <p>
+            Bridging biotechnology and Indian agriculture with 100% genuine inputs, doorstep dispatch, and expert diagnostic advice.
+          </p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
+            <li><a href="farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
+            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
+            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Product Types</h4>
+          <ul class="footer-links">
+            <li><a href="store.html?category=Insecticide"><i class="fas fa-chevron-right"></i> Insecticides</a></li>
+            <li><a href="store.html?category=Fungicide"><i class="fas fa-chevron-right"></i> Fungicides</a></li>
+            <li><a href="store.html?category=Herbicide"><i class="fas fa-chevron-right"></i> Herbicides</a></li>
+            <li><a href="store.html?category=NPK+Fertilizer"><i class="fas fa-chevron-right"></i> NPK Fertilizers</a></li>
+            <li><a href="store.html?category=Humic+Nutrient"><i class="fas fa-chevron-right"></i> Humic Biostimulants</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h4 class="footer-heading">Helpline</h4>
+          <p><i class="fas fa-phone-alt"></i> +91 88075 22326</p>
+          <p><i class="fas fa-envelope"></i> support@agrify.com</p>
+          <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Agri Hub, India</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agrify. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/store.js"></script>
+</body>
+</html>

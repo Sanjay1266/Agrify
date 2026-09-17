@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Agrify</title>
+  <meta name="description" content="Detailed specifications, active ingredients, dosage recommendations, and authentic farmer reviews for agricultural products on Agrify.">
+  
+  <link rel="icon" href="../assets/images/icon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/store.css">
+  <link rel="stylesheet" href="../assets/css/product-details.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="brand-logo">
+          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+          <span>Agrify<span class="accent">.</span></span>
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+          <a href="store.html" class="nav-link active"><i class="fas fa-store"></i> Products</a>
+          <a href="farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
+          <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
+          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="store.html" class="header-action-btn" title="Search Catalog"><i class="fas fa-search"></i></a>
+          <a href="checkout.html" class="header-action-btn" title="Cart">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge" style="display: none;">0</span>
+          </a>
+          <div class="user-menu-wrapper">
+            <div class="user-profile-trigger" id="user-profile-trigger">
+              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
+              <span class="user-display-name">Account</span>
+              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+            </div>
+            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
+          </div>
+          <div class="mobile-toggle" id="mobile-toggle">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Product Detail Section -->
+  <main class="product-detail-section">
+    <div class="container">
+      
+      <!-- Breadcrumbs -->
+      <nav class="breadcrumb-nav">
+        <a href="../index.html">Home</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <a href="store.html">Products</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <a href="store.html" id="breadcrumb-category">Category</a>
+        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+        <span id="breadcrumb-product" style="color: var(--gray-800); font-weight: 600;">Product</span>
+      </nav>
+
+      <!-- Main Visual & Purchase Box -->
+      <div class="detail-grid">
+        
+        <!-- Left: Gallery & Trust -->
+        <div class="product-gallery">
+          <div class="main-image-viewport">
+            <img id="detail-image" src="../assets/images/icon.png" alt="Product Image">
+          </div>
+
+          <div class="trust-badges-grid">
+            <div class="trust-badge-item">
+              <i class="fas fa-shield-check"></i>
+              <div>100% Genuine</div>
+            </div>
+            <div class="trust-badge-item">
+              <i class="fas fa-truck"></i>
+              <div>Safe Transit</div>
+            </div>
+            <div class="trust-badge-item">
+              <i class="fas fa-hand-holding-dollar"></i>
+              <div>Fair Farmer Rate</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Specs & Action -->
+        <div class="product-info-col">
+          <div class="detail-category-row">
+            <span class="badge badge-green" id="detail-category-badge">Category</span>
+            <span class="badge" style="background: var(--gray-100); color: var(--gray-700);"><i class="fas fa-check-circle" style="color: var(--accent-500);"></i> In Stock & Ready</span>
+          </div>
+
+          <h1 class="detail-title" id="detail-title">Loading product...</h1>
+          <div class="detail-company" id="detail-company">By Company</div>
+
+          <div class="detail-rating-row">
+            <div style="color: var(--amber-500); display: flex; gap: 3px;">
+              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            </div>
+            <span id="detail-rating-text" style="font-size: 0.9rem; color: var(--gray-600); font-weight: 500;">4.8 (120 reviews)</span>
+          </div>
+
+          <div class="detail-price-box">
+            <span class="detail-price-current" id="detail-price-current">₹0</span>
+            <span class="detail-price-orig" id="detail-price-orig">₹0</span>
+            <span class="badge badge-amber" id="detail-discount">0% off</span>
+          </div>
+
+          <!-- Pack Size Variants -->
+          <div class="variant-selection-group">
+            <label>Choose Packaging / Volume:</label>
+            <div class="variant-options-list" id="variant-chips">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+          <!-- Quantity & Buy Row -->
+          <div class="purchase-action-row">
+            <div class="quantity-controller">
+              <button class="qty-btn" id="btn-qty-minus"><i class="fas fa-minus"></i></button>
+              <input type="number" id="quantity-input" class="qty-input" value="1" min="1" max="99">
+              <button class="qty-btn" id="btn-qty-plus"><i class="fas fa-plus"></i></button>
+            </div>
+
+            <button class="btn btn-accent detail-add-cart-btn" id="btn-add-cart">
+              <i class="fas fa-cart-plus"></i> Add to Cart
+            </button>
+
+            <button class="btn btn-primary detail-buy-now-btn" id="btn-buy-now">
+              <i class="fas fa-bolt"></i> Buy Now
+            </button>
+          </div>
+
+          <!-- Key Quick Specs -->
+          <div class="product-key-specs">
+            <div class="spec-item">
+              <span class="spec-label">Target Category:</span>
+              <span class="spec-value" id="spec-category">-</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Manufacturer Brand:</span>
+              <span class="spec-value" id="spec-company">-</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Action Classification:</span>
+              <span class="spec-value" id="spec-type">-</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Standard Field Dosage:</span>
+              <span class="spec-value" id="spec-dosage">-</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Specification Tabs -->
+      <div class="detail-tabs-wrapper">
+        <div class="tab-headers-row">
+          <button class="detail-tab-btn active" data-tab="tab-content-desc">Product Overview</button>
+          <button class="detail-tab-btn" data-tab="tab-content-dosage">Dosage & Spray Schedule</button>
+          <button class="detail-tab-btn" data-tab="tab-content-target">Target Pests & Crops</button>
+          <button class="detail-tab-btn" data-tab="tab-content-manufacturer">Manufacturer Guarantee</button>
+        </div>
+
+        <div class="tab-panel active" id="tab-content-desc"></div>
+        <div class="tab-panel" id="tab-content-dosage"></div>
+        <div class="tab-panel" id="tab-content-target"></div>
+        <div class="tab-panel" id="tab-content-manufacturer"></div>
+      </div>
+
+      <!-- Related Products -->
+      <div>
+        <div class="related-products-header">
+          <h3>Related Formulas You May Need</h3>
+        </div>
+        <div class="product-grid" id="related-products-grid"></div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
+            <span>Agrify<span class="accent">.</span></span>
+          </a>
+          <p>Delivering authentic agricultural inputs, advanced formulations, and crop doctor advisory across India.</p>
+        </div>
+        <div>
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+            <li><a href="store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
+            <li><a href="farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
+            <li><a href="checkout.html"><i class="fas fa-chevron-right"></i> My Cart</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="footer-heading">Categories</h4>
+          <ul class="footer-links">
+            <li><a href="store.html?category=Insecticide"><i class="fas fa-chevron-right"></i> Insecticide</a></li>
+            <li><a href="store.html?category=Fungicide"><i class="fas fa-chevron-right"></i> Fungicide</a></li>
+            <li><a href="store.html?category=Herbicide"><i class="fas fa-chevron-right"></i> Herbicide</a></li>
+            <li><a href="store.html?category=NPK+Fertilizer"><i class="fas fa-chevron-right"></i> NPK Fertilizer</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h4 class="footer-heading">Helpline</h4>
+          <p><i class="fas fa-phone-alt"></i> +91 88075 22326</p>
+          <p><i class="fas fa-envelope"></i> support@agrify.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Agrify. All rights reserved.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../assets/js/products-data.js"></script>
+  <script src="../assets/js/cart.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/product-details.js"></script>
+</body>
+</html>
