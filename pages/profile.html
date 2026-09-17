@@ -1,184 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Farmer Dashboard & Orders | Agrify</title>
-  
-  <link rel="icon" href="../assets/images/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/auth.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile | Agrify</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../index.html" class="brand-logo">
-          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-          <span>Agrify<span class="accent">.</span></span>
-        </a>
-
-        <nav class="nav-menu" id="nav-menu">
-          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
-          <a href="store.html" class="nav-link"><i class="fas fa-store"></i> Products</a>
-          <a href="farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
-          <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
-          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+    <header>
+        <div class="logo"><a href="../index.html">Agrify</a></div>
+        <nav>
+            <div id="mobile-menu" class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="farming-guide.html">New to Farming</a></li>
+                <li><a href="store.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkout.html"><i class="fas fa-shopping-cart"></i> Cart</a></li>
+                <li class="usermenu">
+                    <i class="fa-solid fa-user" id="user-icon"></i>
+                    <div class="user-dropdown" id="dropdown-menu">
+                        <a href="profile.html">Profile</a>
+                        <a href="#" id="logout-btn">Logout</a>
+                    </div>
+                </li>
+            </ul>
         </nav>
+    </header>
 
-        <div class="header-actions">
-          <a href="store.html" class="header-action-btn" title="Search"><i class="fas fa-search"></i></a>
-          <a href="checkout.html" class="header-action-btn" title="Cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-badge" style="display: none;">0</span>
-          </a>
-          <div class="user-menu-wrapper">
-            <div class="user-profile-trigger" id="user-profile-trigger">
-              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
-              <span class="user-display-name">Account</span>
-              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+    <main style="padding: 20px 15px; flex: 1;">
+        <div class="profile-container">
+            <div class="profile-header">
+                <h1>User Profile</h1>
+                <span id="auth-status-badge" style="background:#e8f5e9; color:#2e7d32; padding: 4px 12px; border-radius: 15px; font-weight:600; font-size:0.85rem;">Active Farmer</span>
             </div>
-            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
-          </div>
-          <div class="mobile-toggle" id="mobile-toggle">
-            <span></span><span></span><span></span>
-          </div>
+
+            <div class="profile-info-box">
+                <p><strong>Full Name:</strong> <span id="display-name">Farmer</span></p>
+                <p><strong>Username:</strong> <span id="display-username">farmer</span></p>
+            </div>
+
+            <h2 class="profile-section-title">Welcome to Your Agrify Profile</h2>
+            <p style="margin-bottom: 15px; color: #555; line-height: 1.6;">
+                Your profile is your personal space where you can manage your details, review your farming solutions, and explore agricultural products directly from certified suppliers.
+            </p>
+
+            <h3 class="profile-section-title" style="font-size: 1.15rem;">What You Can Do on Agrify:</h3>
+            <ul class="profile-features-list">
+                <li><strong>Browse & Purchase Products:</strong> Explore 80+ agricultural supplies including fertilizers, insecticides, herbicides, and crop growth promoters.</li>
+                <li><strong>Interactive Farming Guide:</strong> Diagnose crop diseases and find scientifically validated cures for various crops.</li>
+                <li><strong>Instant Cart & Checkout:</strong> Place quick delivery orders with flexible payment options.</li>
+                <li><strong>Contact Dedicated Support:</strong> Get expert assistance from agricultural advisors whenever needed.</li>
+            </ul>
+
+            <div class="profile-actions">
+                <a href="store.html" class="btn-primary"><i class="fas fa-shopping-basket"></i> Browse Store</a>
+                <button id="logout-action-btn" class="btn-logout"><i class="fas fa-sign-out-alt"></i> Logout</button>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </main>
 
-  <!-- Profile Section -->
-  <main class="profile-section" id="profile-dashboard-content">
-    <div class="container">
-      <div class="profile-grid">
-        
-        <!-- Sidebar -->
-        <div class="profile-sidebar-card">
-          <img src="../assets/images/default-user.png" alt="Avatar" class="profile-avatar-large">
-          <h2 class="profile-sidebar-name" id="profile-name">Farmer</h2>
-          <div class="profile-sidebar-role" id="profile-username">@farmer</div>
-
-          <div class="profile-nav-links">
-            <button class="profile-nav-item active" data-target="orders-tab">
-              <i class="fas fa-box"></i> My Orders
-            </button>
-            <button class="profile-nav-item" data-target="farm-tab">
-              <i class="fas fa-tractor"></i> Farm Profile
-            </button>
-            <button class="profile-nav-item" data-target="help-tab">
-              <i class="fas fa-headset"></i> Agronomist Help
-            </button>
-            <hr style="border: 0; border-top: 1px solid var(--gray-200); margin: 0.5rem 0;">
-            <button class="profile-nav-item" id="profile-logout-btn" style="color: var(--danger-500);">
-              <i class="fas fa-sign-out-alt"></i> Sign Out
-            </button>
-          </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="store.html">Products</a></li>
+                    <li><a href="farming-guide.html">New to Farming</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Asgaard</p>
+                <p><i class="fas fa-phone"></i> +91 8807522326, +91 9361682841</p>
+                <p><i class="fas fa-envelope"></i> info@agrify.com</p>
+            </div>
         </div>
-
-        <!-- Content Area -->
-        <div>
-          
-          <!-- Orders Tab -->
-          <div class="profile-tab-panel" id="orders-tab" style="display: block;">
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
-              <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--primary-900);">
-                Your Recent Orders
-              </h2>
-              <a href="store.html" class="btn btn-secondary btn-sm">
-                <i class="fas fa-plus"></i> Shop More Products
-              </a>
-            </div>
-
-            <div id="orders-list-container">
-              <!-- Populated by auth.js -->
-            </div>
-          </div>
-
-          <!-- Farm Tab -->
-          <div class="profile-tab-panel" id="farm-tab" style="display: none;">
-            <div class="checkout-box">
-              <h2 class="checkout-box-title"><i class="fas fa-seedling"></i> Farm Profile Details</h2>
-              <p style="color: var(--gray-600); margin-bottom: 1.5rem; font-size: 0.92rem;">
-                Keep your farm profile up to date so our agronomists can suggest accurate fertilizer dosages and crop schedules.
-              </p>
-
-              <form onsubmit="event.preventDefault(); AgrifyApp.showToast('Farm profile updated!');">
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Total Land Area (Acres)</label>
-                    <input type="number" class="form-control" value="5" step="0.5">
-                  </div>
-                  <div class="form-group">
-                    <label>Primary Soil Type</label>
-                    <select class="form-control">
-                      <option>Red Sandy Loam</option>
-                      <option selected>Black Cotton Soil</option>
-                      <option>Clayey Alluvial Soil</option>
-                      <option>Laterite Soil</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="form-row">
-                  <div class="form-group">
-                    <label>Primary Crop</label>
-                    <input type="text" class="form-control" value="Paddy & Banana">
-                  </div>
-                  <div class="form-group">
-                    <label>Irrigation Method</label>
-                    <select class="form-control">
-                      <option selected>Drip / Fertigation</option>
-                      <option>Flood Irrigation</option>
-                      <option>Sprinkler</option>
-                      <option>Rain-fed</option>
-                    </select>
-                  </div>
-                </div>
-
-                <button type="submit" class="btn btn-primary">
-                  Save Farm Profile
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <!-- Help Tab -->
-          <div class="profile-tab-panel" id="help-tab" style="display: none;">
-            <div class="checkout-box">
-              <h2 class="checkout-box-title"><i class="fas fa-user-doctor"></i> Direct Agronomist Support</h2>
-              <p style="color: var(--gray-600); margin-bottom: 1.5rem;">
-                As an Agrify registered member, you get priority phone and WhatsApp advisory for crop diseases, spray schedules, and dosage calculations.
-              </p>
-              <div style="background: var(--accent-50); border: 1px solid var(--accent-300); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1.5rem;">
-                <strong><i class="fas fa-phone-alt"></i> Direct Member Line:</strong> +91 88075 22326 (8:00 AM - 7:00 PM)
-              </div>
-              <a href="contact.html" class="btn btn-accent">Submit Support Ticket</a>
-            </div>
-          </div>
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 Agrify. All rights reserved.</p>
         </div>
+    </footer>
 
-      </div>
-    </div>
-  </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username') || 'Farmer';
+            const name = localStorage.getItem('name') || username;
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <div>&copy; 2026 Agrify. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
+            document.getElementById('display-name').textContent = name;
+            document.getElementById('display-username').textContent = username;
 
-  <!-- Scripts -->
-  <script src="../assets/js/products-data.js"></script>
-  <script src="../assets/js/cart.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/auth.js"></script>
+            function doLogout() {
+                localStorage.removeItem('token');
+                localStorage.removeItem('username');
+                localStorage.removeItem('name');
+                alert('You have logged out.');
+                window.location.href = '../index.html';
+            }
+
+            const logoutBtn = document.getElementById('logout-btn');
+            const logoutActionBtn = document.getElementById('logout-action-btn');
+            if (logoutBtn) logoutBtn.addEventListener('click', doLogout);
+            if (logoutActionBtn) logoutActionBtn.addEventListener('click', doLogout);
+
+            // Mobile menu
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            if (mobileMenu && navLinks) {
+                mobileMenu.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 </body>
 </html>

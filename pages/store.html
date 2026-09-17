@@ -1,192 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agricultural Store | Agrify - Modern Farming Solutions</title>
-  <meta name="description" content="Browse 80+ certified insecticides, fungicides, herbicides, NPK fertilizers, and plant biostimulants. Free shipping available.">
-  
-  <link rel="icon" href="../assets/images/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/store.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Agrify</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="../assets/css/store.css">
 </head>
 <body>
-
-  <!-- Site Navigation Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../index.html" class="brand-logo">
-          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-          <span>Agrify<span class="accent">.</span></span>
-        </a>
-
-        <nav class="nav-menu" id="nav-menu">
-          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
-          
-          <div class="nav-item-has-dropdown">
-            <a href="store.html" class="nav-link active">
-              <i class="fas fa-store"></i> Products <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i>
-            </a>
-            <div class="nav-dropdown">
-              <a href="store.html?category=Insecticide"><span>Insecticides</span> <i class="fas fa-bug"></i></a>
-              <a href="store.html?category=Fungicide"><span>Fungicides</span> <i class="fas fa-shield-virus"></i></a>
-              <a href="store.html?category=Herbicide"><span>Herbicides</span> <i class="fas fa-seedling"></i></a>
-              <a href="store.html?category=NPK+Fertilizer"><span>NPK Fertilizers</span> <i class="fas fa-vial"></i></a>
-              <a href="store.html?category=Humic+Nutrient"><span>Humic Nutrients</span> <i class="fas fa-spa"></i></a>
-              <a href="store.html?category=Plant+Growth+Promoter"><span>Growth Promoters</span> <i class="fas fa-chart-line"></i></a>
-              <a href="store.html?category=Yield+Booster"><span>Yield Boosters</span> <i class="fas fa-award"></i></a>
-              <a href="store.html" style="font-weight: 700; color: var(--accent-500);"><span>View All 80+ Products &rarr;</span></a>
+    <header>
+        <div class="logo"><a href="../index.html">Agrify</a></div>
+        <nav>
+            <div id="mobile-menu" class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-          </div>
-
-          <a href="farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
-          <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
-          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="farming-guide.html">New to Farming</a></li>
+                <li><a href="store.html" style="color:#d4edda; font-weight:700;">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkout.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-badge" id="header-cart-badge" style="display:none;">0</span></a></li>
+                <li class="usermenu">
+                    <i class="fa-solid fa-user" id="user-icon"></i>
+                    <div class="user-dropdown" id="dropdown-menu">
+                        <a href="profile.html">Profile</a>
+                        <a href="login.html" id="login-link">Login</a>
+                        <a href="#" id="logout-link" style="display:none;">Logout</a>
+                    </div>
+                </li>
+            </ul>
         </nav>
+    </header>
 
-        <div class="header-actions">
-          <a href="store.html" class="header-action-btn" title="Search Catalog">
-            <i class="fas fa-search"></i>
-          </a>
-          <a href="checkout.html" class="header-action-btn" title="Cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-badge" style="display: none;">0</span>
-          </a>
-          <div class="user-menu-wrapper">
-            <div class="user-profile-trigger" id="user-profile-trigger">
-              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
-              <span class="user-display-name">Account</span>
-              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+    <div class="store-header-banner">
+        <h1>Agricultural Products Catalog</h1>
+        <p>Explore our complete range of authentic farming supplies, fertilizers, and insecticides.</p>
+        <div class="search-box-container">
+            <input type="text" id="store-search" placeholder="Search by name, chemical, or company...">
+        </div>
+    </div>
+
+    <main>
+        <section class="products-section">
+            <!-- Filter Pills -->
+            <div class="filter-container" id="filter-container">
+                <button class="filter-btn active" data-category="All Products">All Products</button>
+                <button class="filter-btn" data-category="Insecticide">Insecticide</button>
+                <button class="filter-btn" data-category="Fungicide">Fungicide</button>
+                <button class="filter-btn" data-category="Herbicide">Herbicide</button>
+                <button class="filter-btn" data-category="NPK Fertilizer">NPK Fertilizer</button>
+                <button class="filter-btn" data-category="Humic Nutrient">Humic Nutrient</button>
+                <button class="filter-btn" data-category="Nematicide">Nematicide</button>
+                <button class="filter-btn" data-category="Plant Growth Promoter">Plant Growth Promoter</button>
+                <button class="filter-btn" data-category="Yield Booster">Yield Booster</button>
             </div>
-            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
-          </div>
-          <div class="mobile-toggle" id="mobile-toggle">
-            <span></span><span></span><span></span>
-          </div>
+
+            <!-- Product Grid -->
+            <div id="product-list" class="product-grid">
+                <!-- Populated immediately -->
+            </div>
+
+            <div class="load-more-container">
+                <button class="load-more" id="load-more-btn">Load More Products</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="store.html">Products</a></li>
+                    <li><a href="farming-guide.html">New to Farming</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Asgaard</p>
+                <p><i class="fas fa-phone"></i> +91 8807522326, +91 9361682841</p>
+                <p><i class="fas fa-envelope"></i> info@agrify.com</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Store Hero Banner with Search -->
-  <section class="store-hero">
-    <div class="container">
-      <div class="store-hero-content">
-        <h1>Official Agricultural Marketplace</h1>
-        <p>Search over 80 verified crop protection chemicals, specialty micronutrients, and bio-stimulants.</p>
-
-        <div class="store-search-box">
-          <i class="fas fa-search"></i>
-          <input type="text" id="store-search-input" placeholder="Search by crop, pest, brand, or chemical name (e.g. Coragen, Urea, Blight)...">
-          <button type="button" id="store-search-btn">Search</button>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Agrify. All rights reserved.</p>
         </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <!-- Filter Pills & Sort Controls -->
-  <section class="store-controls-section">
-    <div class="container">
-      <!-- Category Pills -->
-      <div class="category-pills-wrapper" id="category-pills">
-        <!-- Rendered by store.js -->
-      </div>
+    <!-- Scripts -->
+    <script src="../assets/js/products-data.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        let activeCategory = urlParams.get('category') || 'All Products';
+        let searchQuery = '';
+        let displayLimit = 16;
 
-      <!-- Secondary Controls -->
-      <div class="filter-bar-secondary">
-        <div class="results-count" id="results-count">
-          Showing <span>0</span> products
-        </div>
+        function renderStoreProducts() {
+            const container = document.getElementById('product-list');
+            if (!container || typeof AgrifyProducts === 'undefined') return;
 
-        <div class="filter-actions">
-          <div>
-            <label for="brand-select" style="font-size: 0.85rem; color: var(--gray-600); margin-right: 0.35rem; font-weight: 600;">Brand:</label>
-            <select class="filter-select" id="brand-select">
-              <option value="All Brands">All Brands</option>
-            </select>
-          </div>
+            container.innerHTML = '';
+            let list = AgrifyProducts.getAll();
 
-          <div>
-            <label for="sort-select" style="font-size: 0.85rem; color: var(--gray-600); margin-right: 0.35rem; font-weight: 600;">Sort By:</label>
-            <select class="filter-select" id="sort-select">
-              <option value="featured">Featured & Best Selling</option>
-              <option value="price-low">Price: Low to High</option>
-              <option value="price-high">Price: High to Low</option>
-              <option value="rating">Customer Rating</option>
-            </select>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+            if (activeCategory && activeCategory !== 'All Products') {
+                list = list.filter(p => p.category.toLowerCase() === activeCategory.toLowerCase());
+            }
 
-  <!-- Product Catalog Grid -->
-  <section class="catalog-section">
-    <div class="container">
-      <div class="product-grid" id="product-grid">
-        <!-- Rendered dynamically by store.js -->
-      </div>
+            if (searchQuery) {
+                const q = searchQuery.toLowerCase();
+                list = list.filter(p => p.name.toLowerCase().includes(q) || p.company.toLowerCase().includes(q));
+            }
 
-      <div class="pagination-container" id="load-more-container" style="display: none;">
-        <button class="btn btn-secondary btn-lg" id="load-more-btn">
-          Load More Products
-        </button>
-      </div>
-    </div>
-  </section>
+            if (list.length === 0) {
+                container.innerHTML = '<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #666;"><h3>No products found matching your search.</h3></div>';
+                return;
+            }
 
-  <!-- Site Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="brand-logo">
-            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-            <span>Agrify<span class="accent">.</span></span>
-          </a>
-          <p>
-            Bridging biotechnology and Indian agriculture with 100% genuine inputs, doorstep dispatch, and expert diagnostic advice.
-          </p>
-        </div>
-        <div>
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
-            <li><a href="farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
-            <li><a href="about.html"><i class="fas fa-chevron-right"></i> About Us</a></li>
-            <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-heading">Product Types</h4>
-          <ul class="footer-links">
-            <li><a href="store.html?category=Insecticide"><i class="fas fa-chevron-right"></i> Insecticides</a></li>
-            <li><a href="store.html?category=Fungicide"><i class="fas fa-chevron-right"></i> Fungicides</a></li>
-            <li><a href="store.html?category=Herbicide"><i class="fas fa-chevron-right"></i> Herbicides</a></li>
-            <li><a href="store.html?category=NPK+Fertilizer"><i class="fas fa-chevron-right"></i> NPK Fertilizers</a></li>
-            <li><a href="store.html?category=Humic+Nutrient"><i class="fas fa-chevron-right"></i> Humic Biostimulants</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact-info">
-          <h4 class="footer-heading">Helpline</h4>
-          <p><i class="fas fa-phone-alt"></i> +91 88075 22326</p>
-          <p><i class="fas fa-envelope"></i> support@agrify.com</p>
-          <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Agri Hub, India</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>&copy; 2026 Agrify. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
+            const visible = list.slice(0, displayLimit);
+            visible.forEach(product => {
+                const card = document.createElement('div');
+                card.className = 'product-card';
+                card.innerHTML = `
+                    <div class="product-image">
+                        <img src="../${product.image}" alt="${product.name}" onerror="this.src='../assets/images/icon.png'">
+                    </div>
+                    <div class="product-info">
+                        <h3><a href="product-details.html?id=${product.id}">${product.name}</a></h3>
+                        <p class="company">${product.company}</p>
+                        <p class="price">₹${product.price}</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            <span>(${product.rating})</span>
+                        </div>
+                        <div class="card-btn-row">
+                            <button class="btn-card-add" onclick="AgrifyCart.addItem(${product.id}, 1)">Add to Cart</button>
+                            <a href="product-details.html?id=${product.id}" class="btn-card-view">Details</a>
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
 
-  <!-- Scripts -->
-  <script src="../assets/js/products-data.js"></script>
-  <script src="../assets/js/cart.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/store.js"></script>
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (loadMoreBtn) {
+                if (displayLimit >= list.length) {
+                    loadMoreBtn.textContent = 'No More Products';
+                    loadMoreBtn.disabled = true;
+                } else {
+                    loadMoreBtn.textContent = 'Load More Products';
+                    loadMoreBtn.disabled = false;
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // Check active button based on URL param
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            filterBtns.forEach(btn => {
+                if (btn.getAttribute('data-category').toLowerCase() === activeCategory.toLowerCase()) {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                }
+
+                btn.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                    activeCategory = this.getAttribute('data-category');
+                    displayLimit = 16;
+                    renderStoreProducts();
+                });
+            });
+
+            // Search input
+            const searchInput = document.getElementById('store-search');
+            if (searchInput) {
+                searchInput.addEventListener('input', function () {
+                    searchQuery = this.value.trim();
+                    displayLimit = 16;
+                    renderStoreProducts();
+                });
+            }
+
+            // Load more
+            const loadMoreBtn = document.getElementById('load-more-btn');
+            if (loadMoreBtn) {
+                loadMoreBtn.addEventListener('click', function () {
+                    displayLimit += 12;
+                    renderStoreProducts();
+                });
+            }
+
+            // Initial render
+            renderStoreProducts();
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                });
+            }
+
+            // User token check
+            const token = localStorage.getItem('token');
+            const loginLink = document.getElementById('login-link');
+            const logoutLink = document.getElementById('logout-link');
+            if (token) {
+                if (loginLink) loginLink.style.display = 'none';
+                if (logoutLink) {
+                    logoutLink.style.display = 'block';
+                    logoutLink.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.reload();
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

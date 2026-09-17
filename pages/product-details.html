@@ -1,241 +1,275 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Details | Agrify</title>
-  <meta name="description" content="Detailed specifications, active ingredients, dosage recommendations, and authentic farmer reviews for agricultural products on Agrify.">
-  
-  <link rel="icon" href="../assets/images/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/store.css">
-  <link rel="stylesheet" href="../assets/css/product-details.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Agrify</title>
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/images/icon.png">
+    <style>
+        .details-container {
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .details-wrapper {
+            display: flex;
+            gap: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            flex-wrap: wrap;
+        }
+        .details-image-box {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fafafa;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #eee;
+        }
+        .details-image-box img {
+            max-width: 100%;
+            max-height: 380px;
+            object-fit: contain;
+        }
+        .details-info-box {
+            flex: 1.2;
+            min-width: 300px;
+        }
+        .details-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 8px;
+        }
+        .details-company {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 12px;
+        }
+        .details-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #28a745;
+            margin-bottom: 15px;
+        }
+        .details-badge {
+            display: inline-block;
+            background: #e8f5e9;
+            color: #2e7d32;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 15px;
+        }
+        .details-desc {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+        }
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+        .specs-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95rem;
+        }
+        .specs-table td:first-child {
+            font-weight: 600;
+            color: #444;
+            width: 35%;
+        }
+        .details-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        .btn-add-large {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: background-color 0.2s ease;
+        }
+        .btn-add-large:hover {
+            background-color: #218838;
+        }
+        .btn-back {
+            background-color: #f1f1f1;
+            color: #333;
+            padding: 14px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        .btn-back:hover {
+            background-color: #e2e2e2;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../index.html" class="brand-logo">
-          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-          <span>Agrify<span class="accent">.</span></span>
-        </a>
-
-        <nav class="nav-menu" id="nav-menu">
-          <a href="../index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
-          <a href="store.html" class="nav-link active"><i class="fas fa-store"></i> Products</a>
-          <a href="farming-guide.html" class="nav-link"><i class="fas fa-book-open"></i> New to Farming</a>
-          <a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> About</a>
-          <a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+    <header>
+        <div class="logo"><a href="../index.html">Agrify</a></div>
+        <nav>
+            <div id="mobile-menu" class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="farming-guide.html">New to Farming</a></li>
+                <li><a href="store.html">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="checkout.html"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-badge" id="header-cart-badge" style="display:none;">0</span></a></li>
+                <li class="usermenu">
+                    <i class="fa-solid fa-user" id="user-icon"></i>
+                    <div class="user-dropdown" id="dropdown-menu">
+                        <a href="profile.html">Profile</a>
+                        <a href="login.html" id="login-link">Login</a>
+                        <a href="#" id="logout-link" style="display:none;">Logout</a>
+                    </div>
+                </li>
+            </ul>
         </nav>
+    </header>
 
-        <div class="header-actions">
-          <a href="store.html" class="header-action-btn" title="Search Catalog"><i class="fas fa-search"></i></a>
-          <a href="checkout.html" class="header-action-btn" title="Cart">
-            <i class="fas fa-shopping-cart"></i>
-            <span class="cart-badge" style="display: none;">0</span>
-          </a>
-          <div class="user-menu-wrapper">
-            <div class="user-profile-trigger" id="user-profile-trigger">
-              <i class="fas fa-user" style="font-size: 1.1rem; color: var(--primary-700);"></i>
-              <span class="user-display-name">Account</span>
-              <i class="fas fa-chevron-down" style="font-size: 0.75rem; color: var(--gray-500);"></i>
+    <main class="details-container">
+        <div class="details-wrapper">
+            <div class="details-image-box">
+                <img id="detail-img" src="../assets/images/icon.png" alt="Product Image">
             </div>
-            <div class="user-dropdown-menu" id="user-dropdown-menu"></div>
-          </div>
-          <div class="mobile-toggle" id="mobile-toggle">
-            <span></span><span></span><span></span>
-          </div>
+            <div class="details-info-box">
+                <span class="details-badge" id="detail-cat">Category</span>
+                <h1 class="details-title" id="detail-title">Product Name</h1>
+                <p class="details-company" id="detail-company">Company</p>
+                <div class="details-price" id="detail-price">₹0</div>
+                <p class="details-desc" id="detail-desc">Loading product details...</p>
+
+                <table class="specs-table">
+                    <tr>
+                        <td>Category:</td>
+                        <td id="spec-cat">-</td>
+                    </tr>
+                    <tr>
+                        <td>Manufacturer:</td>
+                        <td id="spec-comp">-</td>
+                    </tr>
+                    <tr>
+                        <td>Recommended Dosage:</td>
+                        <td id="spec-dos">-</td>
+                    </tr>
+                    <tr>
+                        <td>Target Pests / Spectrum:</td>
+                        <td id="spec-tar">-</td>
+                    </tr>
+                </table>
+
+                <div class="details-actions">
+                    <button class="btn-add-large" id="btn-add-cart"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+                    <a href="store.html" class="btn-back">&larr; Back to Catalog</a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </main>
 
-  <!-- Product Detail Section -->
-  <main class="product-detail-section">
-    <div class="container">
-      
-      <!-- Breadcrumbs -->
-      <nav class="breadcrumb-nav">
-        <a href="../index.html">Home</a>
-        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-        <a href="store.html">Products</a>
-        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-        <a href="store.html" id="breadcrumb-category">Category</a>
-        <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
-        <span id="breadcrumb-product" style="color: var(--gray-800); font-weight: 600;">Product</span>
-      </nav>
-
-      <!-- Main Visual & Purchase Box -->
-      <div class="detail-grid">
-        
-        <!-- Left: Gallery & Trust -->
-        <div class="product-gallery">
-          <div class="main-image-viewport">
-            <img id="detail-image" src="../assets/images/icon.png" alt="Product Image">
-          </div>
-
-          <div class="trust-badges-grid">
-            <div class="trust-badge-item">
-              <i class="fas fa-shield-check"></i>
-              <div>100% Genuine</div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="store.html">Products</a></li>
+                    <li><a href="farming-guide.html">New to Farming</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <div class="trust-badge-item">
-              <i class="fas fa-truck"></i>
-              <div>Safe Transit</div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Lokilabs, Asgaard</p>
+                <p><i class="fas fa-phone"></i> +91 8807522326, +91 9361682841</p>
+                <p><i class="fas fa-envelope"></i> info@agrify.com</p>
             </div>
-            <div class="trust-badge-item">
-              <i class="fas fa-hand-holding-dollar"></i>
-              <div>Fair Farmer Rate</div>
-            </div>
-          </div>
         </div>
-
-        <!-- Right: Specs & Action -->
-        <div class="product-info-col">
-          <div class="detail-category-row">
-            <span class="badge badge-green" id="detail-category-badge">Category</span>
-            <span class="badge" style="background: var(--gray-100); color: var(--gray-700);"><i class="fas fa-check-circle" style="color: var(--accent-500);"></i> In Stock & Ready</span>
-          </div>
-
-          <h1 class="detail-title" id="detail-title">Loading product...</h1>
-          <div class="detail-company" id="detail-company">By Company</div>
-
-          <div class="detail-rating-row">
-            <div style="color: var(--amber-500); display: flex; gap: 3px;">
-              <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            </div>
-            <span id="detail-rating-text" style="font-size: 0.9rem; color: var(--gray-600); font-weight: 500;">4.8 (120 reviews)</span>
-          </div>
-
-          <div class="detail-price-box">
-            <span class="detail-price-current" id="detail-price-current">₹0</span>
-            <span class="detail-price-orig" id="detail-price-orig">₹0</span>
-            <span class="badge badge-amber" id="detail-discount">0% off</span>
-          </div>
-
-          <!-- Pack Size Variants -->
-          <div class="variant-selection-group">
-            <label>Choose Packaging / Volume:</label>
-            <div class="variant-options-list" id="variant-chips">
-              <!-- Rendered via JS -->
-            </div>
-          </div>
-
-          <!-- Quantity & Buy Row -->
-          <div class="purchase-action-row">
-            <div class="quantity-controller">
-              <button class="qty-btn" id="btn-qty-minus"><i class="fas fa-minus"></i></button>
-              <input type="number" id="quantity-input" class="qty-input" value="1" min="1" max="99">
-              <button class="qty-btn" id="btn-qty-plus"><i class="fas fa-plus"></i></button>
-            </div>
-
-            <button class="btn btn-accent detail-add-cart-btn" id="btn-add-cart">
-              <i class="fas fa-cart-plus"></i> Add to Cart
-            </button>
-
-            <button class="btn btn-primary detail-buy-now-btn" id="btn-buy-now">
-              <i class="fas fa-bolt"></i> Buy Now
-            </button>
-          </div>
-
-          <!-- Key Quick Specs -->
-          <div class="product-key-specs">
-            <div class="spec-item">
-              <span class="spec-label">Target Category:</span>
-              <span class="spec-value" id="spec-category">-</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Manufacturer Brand:</span>
-              <span class="spec-value" id="spec-company">-</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Action Classification:</span>
-              <span class="spec-value" id="spec-type">-</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-label">Standard Field Dosage:</span>
-              <span class="spec-value" id="spec-dosage">-</span>
-            </div>
-          </div>
-
+        <div class="footer-bottom">
+            <p>&copy; 2026 Agrify. All rights reserved.</p>
         </div>
+    </footer>
 
-      </div>
+    <!-- Scripts -->
+    <script src="../assets/js/products-data.js"></script>
+    <script src="../assets/js/cart.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const id = urlParams.get('id') || '1';
+            const product = AgrifyProducts.getById(id) || AgrifyProducts.getById(1);
 
-      <!-- Specification Tabs -->
-      <div class="detail-tabs-wrapper">
-        <div class="tab-headers-row">
-          <button class="detail-tab-btn active" data-tab="tab-content-desc">Product Overview</button>
-          <button class="detail-tab-btn" data-tab="tab-content-dosage">Dosage & Spray Schedule</button>
-          <button class="detail-tab-btn" data-tab="tab-content-target">Target Pests & Crops</button>
-          <button class="detail-tab-btn" data-tab="tab-content-manufacturer">Manufacturer Guarantee</button>
-        </div>
+            if (product) {
+                document.title = product.name + " | Agrify";
+                document.getElementById('detail-img').src = "../" + product.image;
+                document.getElementById('detail-img').alt = product.name;
+                document.getElementById('detail-cat').textContent = product.category;
+                document.getElementById('detail-title').textContent = product.name;
+                document.getElementById('detail-company').textContent = "Manufactured by " + product.company;
+                document.getElementById('detail-price').textContent = "₹" + product.price;
+                document.getElementById('detail-desc').textContent = product.description;
 
-        <div class="tab-panel active" id="tab-content-desc"></div>
-        <div class="tab-panel" id="tab-content-dosage"></div>
-        <div class="tab-panel" id="tab-content-target"></div>
-        <div class="tab-panel" id="tab-content-manufacturer"></div>
-      </div>
+                document.getElementById('spec-cat').textContent = product.category;
+                document.getElementById('spec-comp').textContent = product.company;
+                document.getElementById('spec-dos').textContent = product.dosage;
+                document.getElementById('spec-tar').textContent = product.targetPests;
 
-      <!-- Related Products -->
-      <div>
-        <div class="related-products-header">
-          <h3>Related Formulas You May Need</h3>
-        </div>
-        <div class="product-grid" id="related-products-grid"></div>
-      </div>
+                document.getElementById('btn-add-cart').addEventListener('click', function () {
+                    AgrifyCart.addItem(product.id, 1);
+                });
+            }
 
-    </div>
-  </main>
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu');
+            const navLinks = document.getElementById('nav-links');
+            if (mobileMenuBtn && navLinks) {
+                mobileMenuBtn.addEventListener('click', function () {
+                    navLinks.classList.toggle('active');
+                });
+            }
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="../index.html" class="brand-logo">
-            <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-            <span>Agrify<span class="accent">.</span></span>
-          </a>
-          <p>Delivering authentic agricultural inputs, advanced formulations, and crop doctor advisory across India.</p>
-        </div>
-        <div>
-          <h4 class="footer-heading">Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
-            <li><a href="store.html"><i class="fas fa-chevron-right"></i> Product Store</a></li>
-            <li><a href="farming-guide.html"><i class="fas fa-chevron-right"></i> New to Farming</a></li>
-            <li><a href="checkout.html"><i class="fas fa-chevron-right"></i> My Cart</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 class="footer-heading">Categories</h4>
-          <ul class="footer-links">
-            <li><a href="store.html?category=Insecticide"><i class="fas fa-chevron-right"></i> Insecticide</a></li>
-            <li><a href="store.html?category=Fungicide"><i class="fas fa-chevron-right"></i> Fungicide</a></li>
-            <li><a href="store.html?category=Herbicide"><i class="fas fa-chevron-right"></i> Herbicide</a></li>
-            <li><a href="store.html?category=NPK+Fertilizer"><i class="fas fa-chevron-right"></i> NPK Fertilizer</a></li>
-          </ul>
-        </div>
-        <div class="footer-contact-info">
-          <h4 class="footer-heading">Helpline</h4>
-          <p><i class="fas fa-phone-alt"></i> +91 88075 22326</p>
-          <p><i class="fas fa-envelope"></i> support@agrify.com</p>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <div>&copy; 2026 Agrify. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="../assets/js/products-data.js"></script>
-  <script src="../assets/js/cart.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/product-details.js"></script>
+            // User token check
+            const token = localStorage.getItem('token');
+            const loginLink = document.getElementById('login-link');
+            const logoutLink = document.getElementById('logout-link');
+            if (token) {
+                if (loginLink) loginLink.style.display = 'none';
+                if (logoutLink) {
+                    logoutLink.style.display = 'block';
+                    logoutLink.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.reload();
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>

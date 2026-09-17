@@ -1,95 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign In | Agrify Modern Farming Solutions</title>
-  
-  <link rel="icon" href="../assets/images/icon.png" type="image/png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="../assets/css/main.css">
-  <link rel="stylesheet" href="../assets/css/auth.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Agrify</title>
+    <link rel="stylesheet" href="../assets/css/auth.css">
+    <link rel="icon" href="../assets/images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header class="auth-nav-header">
+        <a href="../index.html"><i class="fa-solid fa-arrow-left"></i> Back to Home</a>
+    </header>
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <div class="header-inner">
-        <a href="../index.html" class="brand-logo">
-          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-          <span>Agrify<span class="accent">.</span></span>
-        </a>
+    <main class="auth-main">
+        <form method="POST" action="#" id="loginForm" onsubmit="return validate(event)" onreset="resetForm()">
+            <fieldset>
+                <h2>Login to Agrify</h2>
 
-        <div class="header-actions">
-          <a href="../index.html" class="btn btn-secondary btn-sm"><i class="fas fa-arrow-left"></i> Back to Store</a>
-        </div>
-      </div>
-    </div>
-  </header>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username" onkeydown="handleKeyDown(event)">
+                <span id="username-error" class="error"></span>
 
-  <!-- Login Form Wrapper -->
-  <main class="auth-wrapper">
-    <div class="auth-card">
-      
-      <div class="auth-header">
-        <div class="brand-logo" style="justify-content: center; margin-bottom: 0.75rem;">
-          <div class="logo-icon"><i class="fas fa-leaf"></i></div>
-          <span>Agrify<span class="accent">.</span></span>
-        </div>
-        <h1>Welcome Back</h1>
-        <p>Sign in to track orders, access saved crop guides, and manage your farm profile.</p>
-      </div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password" onkeydown="handleKeyDown(event)">
+                <span id="password-error" class="error"></span> 
 
-      <div class="demo-credentials-note">
-        <i class="fas fa-info-circle" style="color: var(--accent-500); font-size: 1.1rem;"></i>
-        <span><strong>Quick Demo:</strong> Works online with MongoDB or offline with any test credentials.</span>
-      </div>
+                <input type="submit" value="Login">
+                <input type="reset" value="Reset"> 
 
-      <form class="auth-form" id="login-form">
-        <div class="form-group">
-          <label for="username">Username or Email Address</label>
-          <div class="input-with-icon">
-            <i class="fas fa-user"></i>
-            <input type="text" id="username" class="form-control" placeholder="Enter username or email" required autocomplete="username">
-          </div>
-          <span id="username-error" class="error-feedback"></span>
-        </div>
+                <span class="auth-switch">Not Registered yet? <a href="signup.html">Sign up</a></span>
+            </fieldset>
+        </form>
+    </main>
 
-        <div class="form-group">
-          <label for="password">Password</label>
-          <div class="input-with-icon">
-            <i class="fas fa-lock"></i>
-            <input type="password" id="password" class="form-control" placeholder="Enter password" required autocomplete="current-password">
-          </div>
-          <span id="password-error" class="error-feedback"></span>
-        </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const loginForm = document.getElementById("loginForm"); 
+            const resetButton = document.querySelector("input[type='reset']");
+        
+            if (!loginForm || !resetButton) return;
+        
+            loginForm.addEventListener("submit", async function (event) {
+                event.preventDefault(); 
+        
+                if (!validate(event)) {
+                    return;
+                }
+                
+                const username = document.getElementById("username").value.trim();
+                const password = document.getElementById("password").value.trim();
+        
+                try {
+                    const response = await fetch("http://localhost:3001/login", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ username, password })
+                    });
+        
+                    const data = await response.json();
+                    if (response.ok) {
+                        localStorage.setItem("token", data.token || "session-token");
+                        localStorage.setItem("username", username);
+                        localStorage.setItem("name", username);
+        
+                        alert("Login successful!");
+                        window.location.href = "../index.html"; 
+                    } else {
+                        // Offline or demo fallback support
+                        if (username && password) {
+                            localStorage.setItem("token", "demo-token-" + Date.now());
+                            localStorage.setItem("username", username);
+                            localStorage.setItem("name", username);
+                            alert("Login successful!");
+                            window.location.href = "../index.html";
+                        } else {
+                            alert(data.error || "Login failed");
+                        }
+                    }
+                } catch (error) {
+                    // Offline fallback
+                    if (username && password) {
+                        localStorage.setItem("token", "offline-token-" + Date.now());
+                        localStorage.setItem("username", username);
+                        localStorage.setItem("name", username);
+                        alert("Login successful!");
+                        window.location.href = "../index.html";
+                    } else {
+                        alert("An error occurred. Please try again.");
+                    }
+                }
+            });
+        
+            resetButton.addEventListener("click", resetForm);
+        });
+        
+        function validate(event) {
+            let isValid = true;
+        
+            const username = document.getElementById("username").value.trim();
+            const password = document.getElementById("password").value.trim();
+        
+            const usernameError = document.getElementById("username-error");
+            const passwordError = document.getElementById("password-error");
+        
+            usernameError.innerHTML = "";
+            passwordError.innerHTML = "";
+        
+            const usernameRegex = /^[a-zA-Z][a-zA-Z0-9]{2,14}$/; 
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}$/; 
+        
+            if (!usernameRegex.test(username)) {
+                usernameError.innerHTML = "Username must start with a letter and be 3-15 characters long.";
+                isValid = false;
+            }
+        
+            if (!passwordRegex.test(password)) {
+                passwordError.innerHTML = "Password must have 8+ chars, 1 uppercase, 1 lowercase, and 1 number.";
+                isValid = false;
+            }
+        
+            return isValid;
+        }
+        
+        function resetForm() {
+            document.getElementById("username-error").innerHTML = "";
+            document.getElementById("password-error").innerHTML = "";
+        }
 
-        <button type="submit" class="btn btn-primary btn-lg" id="login-submit-btn" style="width: 100%; margin-top: 0.5rem;">
-          Sign In
-        </button>
-      </form>
-
-      <div class="auth-footer">
-        Don't have an Agrify account yet? <a href="signup.html">Create One Free</a>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <div>&copy; 2026 Agrify. All rights reserved.</div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
-  <script src="../assets/js/products-data.js"></script>
-  <script src="../assets/js/cart.js"></script>
-  <script src="../assets/js/main.js"></script>
-  <script src="../assets/js/auth.js"></script>
+        function handleKeyDown(event) {
+            if (event.key === "Enter") {
+                event.preventDefault(); 
+                if (validate(event)) { 
+                    document.querySelector("input[type='submit']").click(); 
+                }
+            }
+        }
+    </script>                                    
 </body>
 </html>
